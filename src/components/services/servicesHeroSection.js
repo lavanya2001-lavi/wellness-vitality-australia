@@ -34,7 +34,7 @@ export default function ServicesHeroSection() {
             <motion.div
               animate={{ y: [0, 10, 0] }}
               transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
-              className="relative aspect-[4/3] rounded-[3rem] overflow-hidden shadow-[0_30px_60px_-15px_rgba(10,37,64,0.1)] border-[10px] border-white z-10"
+              className="relative aspect-[4/3] rounded-[3rem] overflow-hidden shadow-[0_30px_60px_-15px_rgba(22,85,143,0.1)] border-[10px] border-white z-10"
             >
               <img 
                 src="/images/blood-collection.png" 
@@ -61,7 +61,7 @@ export default function ServicesHeroSection() {
 
             <motion.h1
               {...fade(1)}
-              className="font-serif font-bold text-[#0A2540] leading-[1.05] tracking-tight mb-8"
+              className="font-serif font-bold text-[#16558F] leading-[1.05] tracking-tight mb-8"
               style={{ fontSize: "clamp(2.8rem, 5.5vw, 4.2rem)" }}
             >
               Qualified Nursing <br />

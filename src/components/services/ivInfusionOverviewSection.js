@@ -43,7 +43,7 @@ export default function IvInfusionOverviewSection() {
             <p className="text-white/80 leading-relaxed max-w-xl mx-auto mb-10">
               Our IV infusion treatments are administered by AHPRA-registered nurses and tailored to each patient&apos;s needs. Choose from our range of therapy options including immune support, energy boosters, beauty drips and more.
             </p>
-            <Button href="/iv-infusions" variant="cta" className="px-12 py-4 text-lg shadow-[0_0_30px_rgba(212,175,55,0.3)] border border-[#D4AF37]/50">
+            <Button href="/iv-infusions" variant="cta" className="px-12 py-4 text-lg shadow-[0_0_30px_rgba(180,154,99,0.3)] border border-[#B49A63]/50">
               Explore IV Infusions
             </Button>
           </motion.div>

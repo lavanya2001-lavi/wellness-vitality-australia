@@ -98,7 +98,7 @@ function NutrientCard({ nutrient, onHoverStart, onHoverEnd }) {
           <div className="flex flex-col min-w-0">
             <h3
               className="text-[1rem] font-extrabold leading-tight transition-colors duration-200 truncate"
-              style={{ color: hovered ? labelColor : "#0A2540" }}
+              style={{ color: hovered ? labelColor : "#16558F" }}
             >
               {nutrient.name}
             </h3>

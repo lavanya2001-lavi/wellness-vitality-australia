@@ -22,7 +22,7 @@ export default function IvInfusionsPage() {
           title={
             <>
               Direct Nutrient <br />
-              <em style={{ color: "#C8965A", fontStyle: "italic", fontWeight: 600 }}>Optimisation</em>
+              <em style={{ color: "#B49A63", fontStyle: "italic", fontWeight: 600 }}>Optimisation</em>
             </>
           }
           description="100% absorption. Immediate hydration. Tailored clinical protocols delivered in the comfort of your home or clinic."
@@ -33,10 +33,10 @@ export default function IvInfusionsPage() {
               href="/booking"
               className="inline-flex items-center justify-center px-9 py-4 rounded-full text-white font-medium transition-all duration-200 hover:-translate-y-0.5"
               style={{
-                background: "#C8965A",
+                background: "#B49A63",
                 fontSize: "0.9rem",
                 letterSpacing: "0.04em",
-                boxShadow: "0 8px 28px rgba(200,150,90,0.42)",
+                boxShadow: "0 8px 28px rgba(180,154,99,0.42)",
               }}
             >
               Schedule Treatment

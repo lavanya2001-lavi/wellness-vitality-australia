@@ -56,7 +56,7 @@ export default function Testimonials() {
           title={
             <>
               Kind Words from <br />
-              <em style={{ color: "#C8965A", fontStyle: "italic", fontWeight: 600 }}>Our Patients</em>
+              <em style={{ color: "#B49A63", fontStyle: "italic", fontWeight: 600 }}>Our Patients</em>
             </>
           }
           description="Read about the experiences of our patients and the positive results they've achieved through our clinical wellness services."

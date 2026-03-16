@@ -46,7 +46,7 @@ export default function FAQs() {
           title={
             <>
               Frequently Asked <br />
-              <em style={{ color: "#C8965A", fontStyle: "italic", fontWeight: 600 }}>Questions</em>
+              <em style={{ color: "#B49A63", fontStyle: "italic", fontWeight: 600 }}>Questions</em>
             </>
           }
           description="Find answers to common questions about our clinical wellness therapies, safety protocols, and what to expect during your visit."

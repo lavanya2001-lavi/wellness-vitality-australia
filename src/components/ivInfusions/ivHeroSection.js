@@ -43,7 +43,7 @@ export default function IvHeroSection() {
         </motion.p>
 
         <motion.div {...fade(3)} className="flex justify-center">
-          <Button href="/booking" variant="cta" className="px-14 py-5 text-xl shadow-[0_0_50px_rgba(212,175,55,0.4)]">
+          <Button href="/booking" variant="cta" className="px-14 py-5 text-xl shadow-[0_0_50px_rgba(180,154,99,0.4)]">
             Schedule Treatment
           </Button>
         </motion.div>

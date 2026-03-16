@@ -6,7 +6,7 @@ import FluidCanvas from "../shared/FluidCanvas";
 
 export default function Hero() {
   return (
-    <section className="relative min-h-screen w-full overflow-hidden bg-[#0A2540]">
+    <section className="relative min-h-screen w-full overflow-hidden bg-[#16558F]">
 
       {/* ── Background ── */}
       <div className="absolute inset-0 z-0">
@@ -17,7 +17,7 @@ export default function Hero() {
         />
         <div
           className="absolute bottom-0 left-0 right-0 h-64 z-20"
-          style={{ background: "linear-gradient(to top, #0A2540 0%, transparent 100%)" }}
+          style={{ background: "linear-gradient(to top, #16558F 0%, transparent 100%)" }}
         />
       </div>
 
@@ -33,7 +33,7 @@ export default function Hero() {
           {/* Back glow */}
           <div
             className="absolute inset-x-0 bottom-0 h-2/3 opacity-30 blur-[120px]"
-            style={{ background: "radial-gradient(circle at center, rgba(200,150,90,0.3) 0%, transparent 70%)" }}
+            style={{ background: "radial-gradient(circle at center, rgba(180,154,99,0.3) 0%, transparent 70%)" }}
           />
 
           <img
@@ -63,18 +63,18 @@ export default function Hero() {
             transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1], delay: 0.15 }}
             className="inline-flex items-center gap-2 rounded-full px-4 py-2 mb-7"
             style={{
-              background: "rgba(200,150,90,0.12)",
-              border: "1px solid rgba(200,150,90,0.32)",
+              background: "rgba(180,154,99,0.12)",
+              border: "1px solid rgba(180,154,99,0.32)",
             }}
           >
             <div
               className="w-6 h-6 rounded-full flex items-center justify-center flex-shrink-0"
-              style={{ background: "#C8965A" }}
+              style={{ background: "#B49A63" }}
             >
               <Sparkles size={11} color="white" />
             </div>
             <span
-              className="text-[#C8965A] font-medium"
+              className="text-[#B49A63] font-medium"
               style={{ fontSize: "10px", letterSpacing: "0.2em", textTransform: "uppercase" }}
             >
               Premium Nurse-Led Healthcare
@@ -94,7 +94,7 @@ export default function Hero() {
           >
             Your Trusted<br />
             Partner in{" "}
-            <em style={{ color: "#C8965A", fontStyle: "italic", fontWeight: 600 }}>
+            <em style={{ color: "#B49A63", fontStyle: "italic", fontWeight: 600 }}>
               Wellness
             </em>
           </motion.h1>
@@ -133,10 +133,10 @@ export default function Hero() {
               href="/booking"
               className="inline-flex items-center justify-center px-9 py-4 rounded-full text-white font-medium transition-all duration-200 hover:-translate-y-0.5"
               style={{
-                background: "#C8965A",
+                background: "#B49A63",
                 fontSize: "0.9rem",
                 letterSpacing: "0.04em",
-                boxShadow: "0 8px 28px rgba(200,150,90,0.42)",
+                boxShadow: "0 8px 28px rgba(180,154,99,0.42)",
               }}
             >
               Schedule Appointment
@@ -170,10 +170,10 @@ export default function Hero() {
             transition={{ duration: 0.85, ease: [0.16, 1, 0.3, 1], delay: 0.75 }}
             className="flex items-center gap-2"
           >
-            <Home size={13} color="#C8965A" />
+            <Home size={13} color="#B49A63" />
             <span style={{ fontSize: "11.5px", color: "rgba(255,255,255,0.45)", letterSpacing: "0.04em" }}>
               Available at{" "}
-              <span style={{ color: "rgba(200,150,90,0.85)", fontWeight: 500 }}>
+              <span style={{ color: "rgba(180,154,99,0.85)", fontWeight: 500 }}>
                 www.wellnessvitalityaustralia.com.au
               </span>
             </span>
@@ -193,7 +193,7 @@ export default function Hero() {
           {
             label: "Services",
             icon: (
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#C8965A" strokeWidth="1.3">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#B49A63" strokeWidth="1.3">
                 <path d="M12 2C8 2 5 5 5 9c0 5 7 13 7 13s7-8 7-13c0-4-3-7-7-7z" strokeLinecap="round" />
                 <circle cx="12" cy="9" r="2.5" />
               </svg>
@@ -202,7 +202,7 @@ export default function Hero() {
           {
             label: "Treatments",
             icon: (
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#C8965A" strokeWidth="1.3">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#B49A63" strokeWidth="1.3">
                 <path d="M19 3H5a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2V5a2 2 0 00-2-2zM12 8v8M8 12h8" strokeLinecap="round" />
               </svg>
             ),
@@ -210,7 +210,7 @@ export default function Hero() {
           {
             label: "Practitioners",
             icon: (
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#C8965A" strokeWidth="1.3">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#B49A63" strokeWidth="1.3">
                 <path d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" strokeLinecap="round" />
               </svg>
             ),
@@ -218,7 +218,7 @@ export default function Hero() {
           {
             label: "Nurtureship",
             icon: (
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#C8965A" strokeWidth="1.3">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#B49A63" strokeWidth="1.3">
                 <path d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.52 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118L2.98 10.1c-.783-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.52-4.674z" strokeLinecap="round" />
               </svg>
             ),

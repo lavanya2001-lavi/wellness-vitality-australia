@@ -10,15 +10,16 @@ export function FAQAccordion({ items }) {
   return (
     <div className="max-w-3xl mx-auto space-y-4">
       {items.map((item, index) => (
-        <div key={index} className="rounded-2xl border border-primary/5 bg-white overflow-hidden shadow-sm">
+        <div key={index} className="rounded-[2rem] border border-white/80 bg-white/60 backdrop-blur-xl shadow-[0_8px_30px_rgb(0,0,0,0.03)] overflow-hidden transition-all duration-300">
           <button
             onClick={() => setOpenIndex(openIndex === index ? null : index)}
-            className="w-full flex items-center justify-between p-6 text-left hover:bg-primary/5 transition-colors"
+            className="w-full flex items-center justify-between p-8 text-left hover:bg-primary/[0.02] transition-colors"
           >
-            <span className="font-bold text-primary">{item.question}</span>
+            <span className="font-bold text-primary font-serif text-[17px]">{item.question}</span>
             <motion.div
               animate={{ rotate: openIndex === index ? 180 : 0 }}
               transition={{ duration: 0.3 }}
+              className="w-10 h-10 rounded-full bg-secondary/10 flex items-center justify-center shrink-0"
             >
               <ChevronDown size={20} className="text-secondary" />
             </motion.div>
@@ -30,9 +31,9 @@ export function FAQAccordion({ items }) {
                 initial={{ height: 0, opacity: 0 }}
                 animate={{ height: "auto", opacity: 1 }}
                 exit={{ height: 0, opacity: 0 }}
-                transition={{ duration: 0.3, ease: "easeInOut" }}
+                transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
               >
-                <div className="px-6 pb-6 text-text-primary/70 leading-relaxed border-t border-primary/5 pt-4">
+                <div className="px-8 pb-8 text-gray-600 leading-relaxed pt-2 text-[15px]">
                   {item.answer}
                 </div>
               </motion.div>

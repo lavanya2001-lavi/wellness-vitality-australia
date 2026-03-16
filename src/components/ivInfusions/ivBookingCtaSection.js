@@ -22,7 +22,7 @@ export default function IvBookingCtaSection() {
               <Calendar size={36} className="text-secondary" />
             </div>
             <p className="text-white/80 mb-10 max-w-md mx-auto">Choose a convenient date and time for your IV infusion session.</p>
-            <Button href="/booking" variant="cta" className="px-12 py-5 text-xl shadow-[0_0_30px_rgba(212,175,55,0.3)] border border-[#D4AF37]/50">
+            <Button href="/booking" variant="cta" className="px-12 py-5 text-xl shadow-[0_0_30px_rgba(180,154,99,0.3)] border border-[#B49A63]/50">
               Book Appointment
             </Button>
           </motion.div>

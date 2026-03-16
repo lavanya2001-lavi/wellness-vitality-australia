@@ -48,14 +48,15 @@ export default function PreventativeHealthSection() {
                   key={i}
                   initial={{ opacity: 0, x: -10 }}
                   whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ delay: i * 0.08 }}
+                  transition={{ delay: i * 0.08, duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
                   viewport={{ once: true }}
-                  className="group flex items-center gap-4 p-4 rounded-2xl bg-[#F8FAFC] border border-gray-100 hover:border-primary/20 hover:shadow-lg hover:shadow-primary/5 transition-all duration-300"
+                  className="relative group flex items-center gap-5 p-5 rounded-[2rem] bg-white/60 backdrop-blur-xl border border-white/80 shadow-[0_8px_30px_rgb(0,0,0,0.03)] hover:shadow-[0_20px_40px_rgba(22,85,143,0.08)] hover:-translate-y-1 transition-all duration-500 overflow-hidden"
                 >
-                  <div className="w-10 h-10 rounded-lg bg-[#E8F2FA] flex items-center justify-center shrink-0 text-primary group-hover:bg-primary group-hover:text-white transition-all duration-500">
-                    <item.icon size={20} strokeWidth={1.5} />
+                  <div className="absolute inset-0 bg-gradient-to-r from-primary/[0.03] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                  <div className="relative z-10 w-12 h-12 rounded-2xl bg-primary/5 flex items-center justify-center shrink-0 text-primary group-hover:bg-primary group-hover:text-white group-hover:shadow-[0_0_20px_rgba(22,85,143,0.3)] transition-all duration-500">
+                    <item.icon size={22} strokeWidth={1.5} />
                   </div>
-                  <p className="font-medium text-gray-700 text-sm">{item.text}</p>
+                  <p className="relative z-10 font-bold text-gray-800 text-[15px]">{item.text}</p>
                 </motion.div>
               ))}
             </div>
@@ -80,14 +81,15 @@ export default function PreventativeHealthSection() {
                   key={i}
                   initial={{ opacity: 0, x: -10 }}
                   whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ delay: i * 0.08 }}
+                  transition={{ delay: i * 0.08, duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
                   viewport={{ once: true }}
-                  className="group flex items-center gap-4 p-4 rounded-2xl bg-[#F8FAFC] border border-gray-100 hover:border-secondary/20 hover:shadow-lg hover:shadow-secondary/5 transition-all duration-300"
+                  className="relative group flex items-center gap-5 p-5 rounded-[2rem] bg-white/60 backdrop-blur-xl border border-white/80 shadow-[0_8px_30px_rgb(0,0,0,0.03)] hover:shadow-[0_20px_40px_rgba(180,154,99,0.08)] hover:-translate-y-1 transition-all duration-500 overflow-hidden"
                 >
-                  <div className="w-10 h-10 rounded-lg bg-[#FBF5E8] flex items-center justify-center shrink-0 text-secondary group-hover:bg-secondary group-hover:text-white transition-all duration-500">
-                    <item.icon size={20} strokeWidth={1.5} />
+                  <div className="absolute inset-0 bg-gradient-to-r from-secondary/[0.04] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                  <div className="relative z-10 w-12 h-12 rounded-2xl bg-secondary/10 flex items-center justify-center shrink-0 text-secondary group-hover:bg-secondary group-hover:text-white group-hover:shadow-[0_0_20px_rgba(180,154,99,0.3)] transition-all duration-500">
+                    <item.icon size={22} strokeWidth={1.5} />
                   </div>
-                  <p className="font-medium text-gray-700 text-sm">{item.text}</p>
+                  <p className="relative z-10 font-bold text-gray-800 text-[15px]">{item.text}</p>
                 </motion.div>
               ))}
             </div>

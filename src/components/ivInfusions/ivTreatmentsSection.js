@@ -65,21 +65,25 @@ export default function IvTreatmentsSection() {
               key={i}
               initial={{ opacity: 0, y: 25 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ delay: i * 0.08, duration: 0.6 }}
+              transition={{ delay: i * 0.08, duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
               viewport={{ once: true }}
-              className="group relative p-8 rounded-[2.5rem] bg-white border border-gray-100 hover:border-primary/20 hover:shadow-2xl hover:shadow-primary/5 transition-all duration-500 hover:-translate-y-1"
+              className="group relative p-10 rounded-[3rem] bg-white/60 backdrop-blur-xl border border-white/80 shadow-[0_8px_30px_rgb(0,0,0,0.03)] hover:shadow-[0_20px_50px_rgba(22,85,143,0.1)] transition-all duration-500 hover:-translate-y-2 overflow-hidden"
             >
+              <div 
+                className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500" 
+                style={{ background: `linear-gradient(to bottom right, ${treatment.color}08, transparent)` }} 
+              />
               <div
-                className="w-14 h-14 rounded-2xl flex items-center justify-center mb-6 transition-all duration-500"
+                className="relative z-10 w-16 h-16 rounded-2xl flex items-center justify-center mb-8 transition-transform duration-500 group-hover:scale-110 shadow-sm"
                 style={{ backgroundColor: `${treatment.color}15`, color: treatment.color }}
               >
-                <treatment.icon size={28} strokeWidth={1.5} />
+                <treatment.icon size={30} strokeWidth={1.5} />
               </div>
-              <h3 className="text-xl font-bold text-primary font-serif mb-3">{treatment.title}</h3>
-              <p className="text-gray-500 text-sm leading-relaxed mb-6">{treatment.description}</p>
-              <div className="flex items-center justify-between pt-4 border-t border-gray-50">
-                <span className="text-lg font-bold text-secondary font-serif">{treatment.price}</span>
-                <span className="text-xs font-semibold text-primary/40 uppercase tracking-wider">Per Session</span>
+              <h3 className="relative z-10 text-2xl font-bold text-primary font-serif mb-3 leading-tight">{treatment.title}</h3>
+              <p className="relative z-10 text-gray-500 text-[15px] leading-relaxed mb-8">{treatment.description}</p>
+              <div className="relative z-10 flex items-center justify-between pt-5 border-t border-gray-100/80">
+                <span className="text-xl font-bold text-secondary font-serif">{treatment.price}</span>
+                <span className="text-xs font-bold text-primary/40 uppercase tracking-[0.1em]">Per Session</span>
               </div>
             </motion.div>
           ))}

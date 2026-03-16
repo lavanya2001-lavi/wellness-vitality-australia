@@ -25,7 +25,7 @@ export default function ServicesPage() {
           title={
             <>
               Qualified Nursing <br />
-              <em style={{ color: "#C8965A", fontStyle: "italic", fontWeight: 600 }}>Care and Support</em>
+              <em style={{ color: "#B49A63", fontStyle: "italic", fontWeight: 600 }}>Care and Support</em>
             </>
           }
           description="Wellness Vitality Australia provides a range of professional healthcare and wellness services delivered by qualified registered nurses. We support preventative health, recovery, and general wellbeing."

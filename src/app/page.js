@@ -28,7 +28,7 @@ export default function Home() {
             <>
               Your Trusted<br />
               Partner in{" "}
-              <em style={{ color: "#C8965A", fontStyle: "italic", fontWeight: 600 }}>
+              <em style={{ color: "#B49A63", fontStyle: "italic", fontWeight: 600 }}>
                 Wellness
               </em>
             </>
@@ -39,7 +39,7 @@ export default function Home() {
             <div className="relative w-full h-full flex items-center justify-end" style={{ paddingRight: "10%" }}>
               <div
                 className="absolute inset-x-0 bottom-0 h-2/3 opacity-30 blur-[120px]"
-                style={{ background: "radial-gradient(circle at center, rgba(200,150,90,0.3) 0%, transparent 70%)" }}
+                style={{ background: "radial-gradient(circle at center, rgba(180,154,99,0.3) 0%, transparent 70%)" }}
               />
               <img
                 src="/assets/hero_nurse_on_navy.png"
@@ -63,10 +63,10 @@ export default function Home() {
                 href="/booking"
                 className="inline-flex items-center justify-center px-9 py-4 rounded-full text-white font-medium transition-all duration-200 hover:-translate-y-0.5"
                 style={{
-                  background: "#C8965A",
+                  background: "#B49A63",
                   fontSize: "0.9rem",
                   letterSpacing: "0.04em",
-                  boxShadow: "0 8px 28px rgba(200,150,90,0.42)",
+                  boxShadow: "0 8px 28px rgba(180,154,99,0.42)",
                 }}
               >
                 Schedule Appointment
@@ -95,10 +95,10 @@ export default function Home() {
           }
         >
           <div className="flex items-center gap-2 w-full mt-8">
-            <HomeIcon size={13} color="#C8965A" />
+            <HomeIcon size={13} color="#B49A63" />
             <span style={{ fontSize: "11.5px", color: "rgba(255,255,255,0.45)", letterSpacing: "0.04em" }}>
               Available at{" "}
-              <span style={{ color: "rgba(200,150,90,0.85)", fontWeight: 500 }}>
+              <span style={{ color: "rgba(180,154,99,0.85)", fontWeight: 500 }}>
                 www.wellnessvitalityaustralia.com.au
               </span>
             </span>

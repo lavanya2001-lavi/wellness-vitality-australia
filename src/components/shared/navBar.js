@@ -62,10 +62,10 @@ export default function Navbar() {
                 ? "rgba(255,255,255,0.97)"
                 : "rgba(255,255,255,0.07)",
               borderColor: scrolled
-                ? "rgba(10,37,64,0.08)"
+                ? "rgba(22,85,143,0.08)"
                 : "rgba(255,255,255,0.14)",
               boxShadow: scrolled
-                ? "0 4px 32px rgba(10,37,64,0.12)"
+                ? "0 4px 32px rgba(22,85,143,0.12)"
                 : "0 8px 32px rgba(0,0,0,0.18)",
             }}
             transition={{ duration: 0.4, ease: "easeInOut" }}
@@ -99,9 +99,9 @@ export default function Navbar() {
                     className="relative px-4 py-2 rounded-full text-[0.8rem] font-medium transition-colors duration-200"
                     style={{
                       color: isActive
-                        ? "#D4AF37"
+                        ? "#B49A63"
                         : scrolled
-                          ? isHovered ? "#0A2540" : "#6B7A8D"
+                          ? isHovered ? "#16558F" : "#6B7A8D"
                           : isHovered ? "white" : "rgba(255,255,255,0.65)",
                       fontWeight: isActive ? 600 : 500,
                     }}
@@ -113,7 +113,7 @@ export default function Navbar() {
                         className="absolute inset-0 rounded-full -z-10"
                         style={{
                           background: scrolled
-                            ? "rgba(10,37,64,0.05)"
+                            ? "rgba(22,85,143,0.05)"
                             : "rgba(255,255,255,0.1)",
                         }}
                         transition={{ type: "spring", stiffness: 400, damping: 30 }}
@@ -127,8 +127,8 @@ export default function Navbar() {
                         className="absolute inset-0 rounded-full -z-10"
                         style={{
                           background: scrolled
-                            ? "rgba(212,175,55,0.08)"
-                            : "rgba(212,175,55,0.12)",
+                            ? "rgba(180,154,99,0.08)"
+                            : "rgba(180,154,99,0.12)",
                         }}
                         transition={{ type: "spring", stiffness: 400, damping: 30 }}
                       />
@@ -140,7 +140,7 @@ export default function Navbar() {
                       {isActive && (
                         <motion.span
                           layoutId="activeDot"
-                          className="w-1 h-1 rounded-full bg-[#D4AF37] flex-shrink-0"
+                          className="w-1 h-1 rounded-full bg-[#B49A63] flex-shrink-0"
                         />
                       )}
                     </span>
@@ -156,8 +156,8 @@ export default function Navbar() {
                 className="px-5 py-2.5 rounded-full text-white text-[0.8rem] font-medium
                   transition-all duration-200 hover:-translate-y-0.5 hover:shadow-lg"
                 style={{
-                  background: "#D4AF37",
-                  boxShadow: "0 4px 14px rgba(212,175,55,0.35)",
+                  background: "#B49A63",
+                  boxShadow: "0 4px 14px rgba(180,154,99,0.35)",
                   letterSpacing: "0.03em",
                 }}
               >
@@ -170,7 +170,7 @@ export default function Navbar() {
               <Link
                 href="/booking"
                 className="hidden sm:inline-flex px-4 py-2 rounded-full text-white text-[0.8rem] font-medium"
-                style={{ background: "#D4AF37" }}
+                style={{ background: "#B49A63" }}
               >
                 Book
               </Link>
@@ -179,9 +179,9 @@ export default function Navbar() {
                 className="p-2 rounded-full transition-colors duration-200"
                 style={{
                   background: scrolled
-                    ? "rgba(10,37,64,0.06)"
+                    ? "rgba(22,85,143,0.06)"
                     : "rgba(255,255,255,0.1)",
-                  color: scrolled ? "#0A2540" : "white",
+                  color: scrolled ? "#16558F" : "white",
                 }}
                 aria-label={mobileMenuOpen ? "Close menu" : "Open menu"}
               >
@@ -206,7 +206,7 @@ export default function Navbar() {
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               transition={{ duration: 0.3 }}
-              className="fixed inset-0 z-[60] bg-[#0A2540]/70 backdrop-blur-md lg:hidden"
+              className="fixed inset-0 z-[60] bg-[#16558F]/70 backdrop-blur-md lg:hidden"
               onClick={() => setMobileMenuOpen(false)}
             />
 
@@ -225,7 +225,7 @@ export default function Navbar() {
                 <div className="h-20 flex items-center justify-between px-6"
                   style={{ borderBottom: "1px solid #F0F4F8" }}>
                   <span
-                    className="font-serif font-bold text-[#0A2540]"
+                    className="font-serif font-bold text-[#16558F]"
                     style={{ fontSize: "1.1rem" }}
                   >
                     Wellness Vitality
@@ -255,13 +255,13 @@ export default function Navbar() {
                           className="flex items-center justify-between px-5 py-3.5 rounded-2xl
                             text-[1rem] font-medium transition-all duration-200"
                           style={{
-                            background: isActive ? "rgba(212,175,55,0.08)" : "transparent",
-                            color: isActive ? "#0A2540" : "#6B7A8D",
+                            background: isActive ? "rgba(180,154,99,0.08)" : "transparent",
+                            color: isActive ? "#16558F" : "#6B7A8D",
                           }}
                         >
                           {link.label}
                           {isActive && (
-                            <span className="w-2 h-2 rounded-full bg-[#D4AF37]" />
+                            <span className="w-2 h-2 rounded-full bg-[#B49A63]" />
                           )}
                         </Link>
                       </motion.div>
@@ -283,8 +283,8 @@ export default function Navbar() {
                       className="flex items-center justify-center w-full py-4 rounded-2xl
                         text-white font-medium text-[1rem] transition-all duration-200"
                       style={{
-                        background: "#D4AF37",
-                        boxShadow: "0 6px 20px rgba(212,175,55,0.35)",
+                        background: "#B49A63",
+                        boxShadow: "0 6px 20px rgba(180,154,99,0.35)",
                       }}
                     >
                       Book Appointment
@@ -292,7 +292,7 @@ export default function Navbar() {
                   </motion.div>
 
                   <div className="text-center pb-2">
-                    <p className="text-[9px] font-bold uppercase tracking-[0.2em] text-[#D4AF37]">
+                    <p className="text-[9px] font-bold uppercase tracking-[0.2em] text-[#B49A63]">
                       AHPRA Registered
                     </p>
                     <p className="text-[10px] text-gray-400 mt-1">
