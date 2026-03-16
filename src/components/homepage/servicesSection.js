@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { Droplets, ClipboardCheck, ShieldCheck, HeartPulse, Syringe, Users } from "lucide-react";
 import Section from "../shared/sectionWrapper";
 import Container from "../shared/Container";
+import Link from "next/link";
 
 // ── Arrow icon ──
 const ArrowIcon = () => (
@@ -62,12 +63,12 @@ const CardFooter = ({ href, dark = false }) => (
         : "1px solid #E8EEF5",
     }}
   >
-    <a
+    <Link
       href={href}
       className="text-[10px] font-medium tracking-[0.12em] uppercase text-[#D4AF37] transition-colors duration-300"
     >
       Learn more
-    </a>
+    </Link>
     <CardArrow dark={dark} />
   </div>
 );
@@ -107,13 +108,13 @@ export default function ServicesSection() {
             <p className="text-[0.83rem] font-light text-[#6B7A8D] leading-relaxed max-w-[34ch] lg:text-right hidden lg:block">
               Professional healthcare tailored to your needs — delivered at your door.
             </p>
-            <a
+            <Link
               href="/services"
               className="flex-shrink-0 inline-flex items-center gap-2 px-6 py-3 rounded-full border-[1.5px] border-[rgba(10,37,64,0.15)] text-[0.78rem] font-medium text-[#0A2540] tracking-[0.04em] transition-all duration-200 hover:bg-[#0A2540] hover:text-white hover:border-[#0A2540]"
             >
               View All
               <ArrowIcon />
-            </a>
+            </Link>
           </div>
         </motion.div>
 
@@ -382,12 +383,12 @@ export default function ServicesSection() {
                 </p>
               </div>
               <div className="flex items-center gap-3 flex-shrink-0">
-                <a
+                <Link
                   href="/services#corporate"
                   className="text-[10px] font-medium tracking-[0.12em] uppercase text-[#D4AF37]"
                 >
                   Learn more
-                </a>
+                </Link>
                 <CardArrow />
               </div>
             </div>

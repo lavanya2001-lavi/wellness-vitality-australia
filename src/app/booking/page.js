@@ -3,8 +3,9 @@
 import Navbar from '../../components/shared/navBar';
 import Footer from '../../components/shared/footerSection';
 import { ClinicalDisclaimer } from '../../components/shared/ClinicalDisclaimer';
+import Hero from '../../components/shared/Hero';
+import { Calendar } from 'lucide-react';
 
-import BookingHeroSection from '../../components/booking/bookingHeroSection';
 import BookingWidgetSection from '../../components/booking/bookingWidgetSection';
 import PaymentSection from '../../components/booking/paymentSection';
 
@@ -13,7 +14,18 @@ export default function BookingPage() {
     <div className="min-h-screen bg-background flex flex-col">
       <Navbar />
       <main className="flex-grow">
-        <BookingHeroSection />
+        <Hero 
+          layout="centered"
+          badgeIcon={Calendar}
+          badgeText="Secure Bookings"
+          title={
+            <>
+              Book Your <br />
+              <em style={{ color: "#C8965A", fontStyle: "italic", fontWeight: 600 }}>Wellness Experience</em>
+            </>
+          }
+          description="Simple, secure, and clinical. Select your treatment and preferred time below to start your journey to vitality."
+        />
         <BookingWidgetSection />
         <PaymentSection />
         <ClinicalDisclaimer />

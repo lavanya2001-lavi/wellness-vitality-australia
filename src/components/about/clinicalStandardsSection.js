@@ -5,6 +5,7 @@ import { ShieldCheck, Award, FileCheck, Stethoscope } from "lucide-react";
 import { SectionHeader } from "../shared/sectionHeading";
 import Section from "../shared/sectionWrapper";
 import Container from "../shared/Container";
+import Link from "next/link";
 
 const STANDARDS = [
   { title: "AHPRA Registered", desc: "All practitioners are fully registered with the Australian Health Practitioner Regulation Agency.", icon: ShieldCheck },
@@ -29,6 +30,12 @@ export default function ClinicalStandardsSection() {
               <p className="text-gray-500 text-sm leading-relaxed">{item.desc}</p>
             </motion.div>
           ))}
+        </div>
+        <div className="mt-12 text-center">
+          <Link href="/contact" className="inline-flex items-center gap-2 px-8 py-4 rounded-full bg-primary text-white font-medium text-sm tracking-wide transition-all duration-200 hover:-translate-y-0.5 hover:shadow-xl hover:shadow-primary/20">
+            Contact Our Clinical Team
+            <span className="text-lg">→</span>
+          </Link>
         </div>
       </Container>
     </Section>

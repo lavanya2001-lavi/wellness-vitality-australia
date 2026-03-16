@@ -5,6 +5,7 @@ import { Home as HomeIcon, Activity } from "lucide-react";
 import { SectionHeader } from "../shared/sectionHeading";
 import Section from "../shared/sectionWrapper";
 import Container from "../shared/Container";
+import Link from "next/link";
 
 export default function MobileCareSection() {
   return (
@@ -59,6 +60,15 @@ export default function MobileCareSection() {
                   <p className="text-gray-600 leading-relaxed">{point}</p>
                 </div>
               ))}
+            </div>
+            <div className="mt-10">
+              <Link
+                href="/booking"
+                className="inline-flex items-center gap-2 px-8 py-4 rounded-full bg-primary text-white font-medium text-sm tracking-wide transition-all duration-200 hover:-translate-y-0.5 hover:shadow-xl hover:shadow-primary/20"
+              >
+                Book a Home Visit
+                <span className="text-lg">→</span>
+              </Link>
             </div>
           </motion.div>
         </div>
