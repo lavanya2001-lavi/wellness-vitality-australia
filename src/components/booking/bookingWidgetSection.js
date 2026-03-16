@@ -16,29 +16,31 @@ export default function BookingWidgetSection() {
               { icon: Clock, title: "Pick Time", desc: "Select a convenient appointment time." },
               { icon: CheckCircle, title: "Confirm", desc: "Receive instant booking confirmation." },
             ].map((step, i) => (
-              <motion.div key={i} initial={{ opacity: 0, y: 15 }} whileInView={{ opacity: 1, y: 0 }} transition={{ delay: i * 0.1 }} viewport={{ once: true }}
-                className="text-center p-6 rounded-2xl bg-white border border-gray-100">
-                <div className="w-12 h-12 mx-auto rounded-xl bg-[#E8F2FA] flex items-center justify-center mb-4 text-primary">
-                  <step.icon size={24} strokeWidth={1.5} />
+              <motion.div key={i} initial={{ opacity: 0, y: 15 }} whileInView={{ opacity: 1, y: 0 }} transition={{ delay: i * 0.1, duration: 0.7, ease: [0.16, 1, 0.3, 1] }} viewport={{ once: true }}
+                className="group relative text-center p-8 rounded-[2rem] bg-white/60 backdrop-blur-xl border border-white/80 shadow-[0_8px_30px_rgb(0,0,0,0.03)] hover:shadow-[0_20px_40px_rgba(22,85,143,0.08)] hover:-translate-y-1 transition-all duration-500 overflow-hidden">
+                <div className="absolute inset-0 bg-gradient-to-b from-primary/[0.02] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                <div className="relative z-10 w-14 h-14 mx-auto rounded-2xl bg-primary/5 flex items-center justify-center mb-5 text-primary group-hover:bg-primary group-hover:text-white transition-all duration-500">
+                  <step.icon size={26} strokeWidth={1.5} />
                 </div>
-                <div className="w-8 h-8 mx-auto rounded-full bg-primary text-white flex items-center justify-center text-sm font-bold mb-3">{i + 1}</div>
-                <h4 className="font-bold text-primary font-serif mb-1">{step.title}</h4>
-                <p className="text-gray-500 text-sm">{step.desc}</p>
+                <div className="relative z-10 w-8 h-8 mx-auto rounded-full bg-primary text-white flex items-center justify-center text-sm font-bold mb-3 shadow-[0_0_15px_rgba(22,85,143,0.3)]">{i + 1}</div>
+                <h4 className="relative z-10 font-bold text-primary text-lg font-serif mb-1">{step.title}</h4>
+                <p className="relative z-10 text-gray-500 text-sm leading-relaxed">{step.desc}</p>
               </motion.div>
             ))}
           </div>
 
           {/* Calendly Integration Placeholder */}
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}
-            className="p-12 rounded-[3rem] bg-white border-2 border-dashed border-primary/20 text-center">
-            <div className="w-20 h-20 mx-auto rounded-3xl bg-[#E8F2FA] flex items-center justify-center mb-8 text-primary">
+            className="relative p-12 md:p-16 rounded-[3rem] bg-white/60 backdrop-blur-xl border-2 border-dashed border-primary/30 shadow-[0_8px_30px_rgb(0,0,0,0.02)] text-center overflow-hidden">
+            <div className="absolute inset-0 bg-primary/[0.02]" />
+            <div className="relative z-10 w-20 h-20 mx-auto rounded-3xl bg-primary/5 flex items-center justify-center mb-8 text-primary shadow-[0_0_20px_rgba(22,85,143,0.1)]">
               <Calendar size={40} strokeWidth={1.5} />
             </div>
-            <h3 className="text-2xl font-bold text-primary font-serif mb-4">Online Booking</h3>
-            <p className="text-gray-500 mb-2 max-w-lg mx-auto">
+            <h3 className="relative z-10 text-2xl md:text-3xl font-bold text-primary font-serif mb-4">Online Booking</h3>
+            <p className="relative z-10 text-gray-500 mb-2 max-w-lg mx-auto text-[15px] leading-relaxed">
               Our Calendly booking widget will be integrated here. Patients will be able to select their preferred IV treatment, date and time.
             </p>
-            <p className="text-xs text-gray-400 uppercase tracking-wider font-semibold mt-4">Calendly Integration — Coming Soon</p>
+            <p className="relative z-10 text-xs text-primary/60 uppercase tracking-wider font-semibold mt-6">Calendly Integration — Coming Soon</p>
           </motion.div>
         </div>
       </Container>

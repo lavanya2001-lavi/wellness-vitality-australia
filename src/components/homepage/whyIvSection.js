@@ -28,7 +28,7 @@ const WHY_IV_THERAPY = [
 
 export default function WhyIvSection() {
   return (
-    <Section className="py-24 lg:py-32" style={{ background: "#0A2540" }}>
+    <Section className="py-24 lg:py-32" style={{ background: "#16558F" }}>
       <Container>
 
         {/* ── Header ── */}
@@ -41,13 +41,13 @@ export default function WhyIvSection() {
         >
           {/* Eyebrow */}
           <div className="inline-flex items-center gap-2.5 mb-5">
-            <span className="w-6 h-[1.5px] bg-[#D4AF37]" />
+            <span className="w-6 h-[1.5px] bg-[#B49A63]" />
             <span
-              className="text-[9.5px] font-semibold tracking-[0.26em] uppercase text-[#D4AF37]"
+              className="text-[9.5px] font-semibold tracking-[0.26em] uppercase text-[#B49A63]"
             >
               Why IV Therapy
             </span>
-            <span className="w-6 h-[1.5px] bg-[#D4AF37]" />
+            <span className="w-6 h-[1.5px] bg-[#B49A63]" />
           </div>
 
           <h2
@@ -55,7 +55,7 @@ export default function WhyIvSection() {
             style={{ fontSize: "clamp(2rem, 3.5vw, 2.8rem)" }}
           >
             The Science Behind{" "}
-            <em className="italic text-[#D4AF37]">IV Therapy</em>
+            <em className="italic text-[#B49A63]">IV Therapy</em>
           </h2>
 
           <p className="text-[0.85rem] font-light text-white/45 leading-relaxed max-w-[46ch] mx-auto">
@@ -79,7 +79,7 @@ export default function WhyIvSection() {
                   duration: 0.8,
                   ease: [0.16, 1, 0.3, 1],
                 }}
-                className="group relative rounded-[20px] p-8 overflow-hidden cursor-default transition-all duration-300 hover:border-[rgba(212,175,55,0.25)]"
+                className="group relative rounded-[20px] p-8 overflow-hidden cursor-default transition-all duration-300 hover:border-[rgba(180,154,99,0.25)]"
                 style={{
                   background: "rgba(255,255,255,0.04)",
                   border: "1px solid rgba(255,255,255,0.08)",
@@ -90,7 +90,7 @@ export default function WhyIvSection() {
                   className="absolute -bottom-16 left-1/2 -translate-x-1/2 w-40 h-40 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"
                   style={{
                     background:
-                      "radial-gradient(circle, rgba(212,175,55,0.18) 0%, transparent 70%)",
+                      "radial-gradient(circle, rgba(180,154,99,0.18) 0%, transparent 70%)",
                   }}
                 />
 
@@ -99,7 +99,7 @@ export default function WhyIvSection() {
                   className="absolute top-0 left-0 right-0 h-[1px] opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"
                   style={{
                     background:
-                      "linear-gradient(to right, transparent, rgba(212,175,55,0.6), transparent)",
+                      "linear-gradient(to right, transparent, rgba(180,154,99,0.6), transparent)",
                   }}
                 />
 
@@ -109,23 +109,23 @@ export default function WhyIvSection() {
                   {/* Benefit number */}
                   <p
                     className="text-[9px] font-semibold tracking-[0.2em] uppercase mb-5"
-                    style={{ color: "rgba(212,175,55,0.5)" }}
+                    style={{ color: "rgba(180,154,99,0.5)" }}
                   >
                     {item.num} — Benefit
                   </p>
 
                   {/* Icon */}
                   <div
-                    className="w-14 h-14 rounded-2xl flex items-center justify-center mb-6 transition-all duration-300 group-hover:bg-[rgba(212,175,55,0.18)] group-hover:border-[rgba(212,175,55,0.3)]"
+                    className="w-14 h-14 rounded-2xl flex items-center justify-center mb-6 transition-all duration-300 group-hover:bg-[rgba(180,154,99,0.18)] group-hover:border-[rgba(180,154,99,0.3)]"
                     style={{
-                      background: "rgba(212,175,55,0.1)",
-                      border: "1px solid rgba(212,175,55,0.2)",
+                      background: "rgba(180,154,99,0.1)",
+                      border: "1px solid rgba(180,154,99,0.2)",
                     }}
                   >
                     <Icon
                       size={22}
                       strokeWidth={1.6}
-                      className="text-[#D4AF37] transition-colors duration-300"
+                      className="text-[#B49A63] transition-colors duration-300"
                     />
                   </div>
 
@@ -147,7 +147,7 @@ export default function WhyIvSection() {
 
                   {/* Animated gold divider */}
                   <div
-                    className="mt-6 h-[1.5px] bg-[#D4AF37] opacity-40 w-7 group-hover:w-11 group-hover:opacity-100 transition-all duration-300"
+                    className="mt-6 h-[1.5px] bg-[#B49A63] opacity-40 w-7 group-hover:w-11 group-hover:opacity-100 transition-all duration-300"
                   />
                 </div>
               </motion.div>
@@ -170,19 +170,19 @@ export default function WhyIvSection() {
           <div className="flex items-center gap-4">
             <span
               className="w-2.5 h-2.5 rounded-full flex-shrink-0 animate-pulse"
-              style={{ background: "#D4AF37" }}
+              style={{ background: "#B49A63" }}
             />
             <p className="text-white/70 font-light text-[0.95rem]">
               Ready to experience the benefits of{" "}
-              <span className="text-[#D4AF37] font-medium">IV therapy at home?</span>
+              <span className="text-[#B49A63] font-medium">IV therapy at home?</span>
             </p>
           </div>
           <a
             href="/booking"
             className="flex-shrink-0 inline-flex items-center gap-2.5 px-7 py-3.5 rounded-full text-white font-medium text-[0.88rem] tracking-[0.03em] transition-all duration-200 hover:-translate-y-0.5 hover:shadow-xl"
             style={{
-              background: "#D4AF37",
-              boxShadow: "0 6px 20px rgba(212,175,55,0.3)",
+              background: "#B49A63",
+              boxShadow: "0 6px 20px rgba(180,154,99,0.3)",
             }}
           >
             Book a Session

@@ -22,7 +22,7 @@ export default function Hero({
   const isCentered = layout === "centered";
 
   return (
-    <section className="relative min-h-[60vh] md:min-h-[75vh] w-full overflow-hidden bg-[#0A2540] flex items-center pt-32 pb-24">
+    <section className="relative min-h-[60vh] md:min-h-[75vh] w-full overflow-hidden bg-[#16558F] flex items-center pt-32 pb-24">
       {/* ── Background ── */}
       <div className="absolute inset-0 z-0">
         {useFluidCanvas && <FluidCanvas />}
@@ -32,7 +32,7 @@ export default function Hero({
         />
         <div
           className="absolute bottom-0 left-0 right-0 h-64 z-20"
-          style={{ background: "linear-gradient(to top, #0A2540 0%, transparent 100%)" }}
+          style={{ background: "linear-gradient(to top, #16558F 0%, transparent 100%)" }}
         />
       </div>
 
@@ -48,20 +48,20 @@ export default function Hero({
               transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1], delay: 0.15 }}
               className={`inline-flex items-center gap-2 rounded-full px-4 py-2 mb-7`}
               style={{
-                background: "rgba(200,150,90,0.12)",
-                border: "1px solid rgba(200,150,90,0.32)",
+                background: "rgba(180,154,99,0.12)",
+                border: "1px solid rgba(180,154,99,0.32)",
               }}
             >
               {BadgeIcon && (
                 <div
                   className="w-6 h-6 rounded-full flex items-center justify-center flex-shrink-0"
-                  style={{ background: "#C8965A" }}
+                  style={{ background: "#B49A63" }}
                 >
                   <BadgeIcon size={11} color="white" />
                 </div>
               )}
               <span
-                className="text-[#C8965A] font-medium"
+                className="text-[#B49A63] font-medium"
                 style={{ fontSize: "10px", letterSpacing: "0.2em", textTransform: "uppercase" }}
               >
                 {badgeText}
@@ -136,9 +136,9 @@ export default function Hero({
             {imageComponent ? (
               imageComponent
             ) : (
-              <div className="relative w-full max-w-md lg:max-w-lg aspect-[4/3] rounded-[2rem] overflow-hidden border border-[rgba(200,150,90,0.2)] shadow-[0_20px_60px_-15px_rgba(0,0,0,0.5)]">
-                <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-[#0A2540] to-transparent z-10 pointer-events-none opacity-80" />
-                <div className="absolute inset-0 bg-[#0A2540]/20 z-0 pointer-events-none" />
+              <div className="relative w-full max-w-md lg:max-w-lg aspect-[4/3] rounded-[2rem] overflow-hidden border border-[rgba(180,154,99,0.2)] shadow-[0_20px_60px_-15px_rgba(0,0,0,0.5)]">
+                <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-[#16558F] to-transparent z-10 pointer-events-none opacity-80" />
+                <div className="absolute inset-0 bg-[#16558F]/20 z-0 pointer-events-none" />
                 <img
                   src={imageSrc}
                   alt={imageAlt || "Hero Image"}

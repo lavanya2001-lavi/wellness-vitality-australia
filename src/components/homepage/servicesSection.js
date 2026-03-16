@@ -23,7 +23,7 @@ const CardShell = ({ children, className = "", style = {} }) => (
     <div
       className="absolute inset-0 z-0 translate-y-full group-hover:translate-y-0 transition-transform duration-[420ms]"
       style={{
-        background: "#0A2540",
+        background: "#16558F",
         transitionTimingFunction: "cubic-bezier(0.16,1,0.3,1)",
       }}
     />
@@ -31,7 +31,7 @@ const CardShell = ({ children, className = "", style = {} }) => (
     <div
       className="absolute top-0 left-0 right-0 h-[2.5px] z-20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-150"
       style={{
-        background: "linear-gradient(to right, #D4AF37 0%, rgba(212,175,55,0.3) 60%, transparent 100%)",
+        background: "linear-gradient(to right, #B49A63 0%, rgba(180,154,99,0.3) 60%, transparent 100%)",
       }}
     />
     <div className="relative z-10 flex flex-col h-full">{children}</div>
@@ -41,12 +41,12 @@ const CardShell = ({ children, className = "", style = {} }) => (
 // ── Arrow button ──
 const CardArrow = ({ dark = false }) => (
   <div
-    className="w-7 h-7 rounded-full flex items-center justify-center flex-shrink-0 group-hover:bg-[#D4AF37] group-hover:border-[#D4AF37] group-hover:rotate-45 transition-all duration-300"
-    style={{ border: dark ? "1px solid rgba(255,255,255,0.2)" : "1px solid rgba(10,37,64,0.12)" }}
+    className="w-7 h-7 rounded-full flex items-center justify-center flex-shrink-0 group-hover:bg-[#B49A63] group-hover:border-[#B49A63] group-hover:rotate-45 transition-all duration-300"
+    style={{ border: dark ? "1px solid rgba(255,255,255,0.2)" : "1px solid rgba(22,85,143,0.12)" }}
   >
     <span
       className="text-current group-hover:text-white transition-colors duration-300"
-      style={{ color: dark ? "rgba(255,255,255,0.6)" : "#0A2540" }}
+      style={{ color: dark ? "rgba(255,255,255,0.6)" : "#16558F" }}
     >
       <ArrowIcon />
     </span>
@@ -65,7 +65,7 @@ const CardFooter = ({ href, dark = false }) => (
   >
     <Link
       href={href}
-      className="text-[10px] font-medium tracking-[0.12em] uppercase text-[#D4AF37] transition-colors duration-300"
+      className="text-[10px] font-medium tracking-[0.12em] uppercase text-[#B49A63] transition-colors duration-300"
     >
       Learn more
     </Link>
@@ -88,20 +88,20 @@ export default function ServicesSection() {
         >
           <div>
             <div className="inline-flex items-center gap-2.5 mb-4">
-              <span className="w-6 h-[1.5px] bg-[#D4AF37]" />
+              <span className="w-6 h-[1.5px] bg-[#B49A63]" />
               <span
-                className="text-[9.5px] font-semibold tracking-[0.26em] uppercase text-[#D4AF37]"
+                className="text-[9.5px] font-semibold tracking-[0.26em] uppercase text-[#B49A63]"
               >
                 Our Services
               </span>
             </div>
             <h2
-              className="font-serif font-bold text-[#0A2540] leading-[1.06] tracking-tight"
+              className="font-serif font-bold text-[#16558F] leading-[1.06] tracking-tight"
               style={{ fontSize: "clamp(2rem, 3.5vw, 2.8rem)" }}
             >
               Clinical & Wellness
               <br />
-              <em className="italic text-[#D4AF37]">Services</em>
+              <em className="italic text-[#B49A63]">Services</em>
             </h2>
           </div>
           <div className="flex items-center gap-5 flex-shrink-0">
@@ -110,7 +110,7 @@ export default function ServicesSection() {
             </p>
             <Link
               href="/services"
-              className="flex-shrink-0 inline-flex items-center gap-2 px-6 py-3 rounded-full border-[1.5px] border-[rgba(10,37,64,0.15)] text-[0.78rem] font-medium text-[#0A2540] tracking-[0.04em] transition-all duration-200 hover:bg-[#0A2540] hover:text-white hover:border-[#0A2540]"
+              className="flex-shrink-0 inline-flex items-center gap-2 px-6 py-3 rounded-full border-[1.5px] border-[rgba(22,85,143,0.15)] text-[0.78rem] font-medium text-[#16558F] tracking-[0.04em] transition-all duration-200 hover:bg-[#16558F] hover:text-white hover:border-[#16558F]"
             >
               View All
               <ArrowIcon />
@@ -131,19 +131,19 @@ export default function ServicesSection() {
           >
             <CardShell
               className="h-full min-h-[420px] lg:min-h-full p-8"
-              style={{ background: "#0A2540" }}
+              style={{ background: "#16558F" }}
             >
               {/* Top: badge + icon */}
               <div>
                 <div
                   className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full mb-6"
                   style={{
-                    background: "rgba(212,175,55,0.12)",
-                    border: "1px solid rgba(212,175,55,0.3)",
+                    background: "rgba(180,154,99,0.12)",
+                    border: "1px solid rgba(180,154,99,0.3)",
                   }}
                 >
-                  <span className="w-1.5 h-1.5 rounded-full bg-[#D4AF37]" />
-                  <span className="text-[9px] font-medium tracking-[0.18em] uppercase text-[#D4AF37]">
+                  <span className="w-1.5 h-1.5 rounded-full bg-[#B49A63]" />
+                  <span className="text-[9px] font-medium tracking-[0.18em] uppercase text-[#B49A63]">
                     Most Popular
                   </span>
                 </div>
@@ -193,7 +193,7 @@ export default function ServicesSection() {
             >
               <div className="relative">
                 <span
-                  className="absolute -top-2 -right-1 font-serif font-bold leading-none select-none text-[#0A2540]/[0.05] group-hover:text-white/[0.05] transition-colors duration-300"
+                  className="absolute -top-2 -right-1 font-serif font-bold leading-none select-none text-[#16558F]/[0.05] group-hover:text-white/[0.05] transition-colors duration-300"
                   style={{ fontSize: "4.5rem", letterSpacing: "-0.03em" }}
                 >
                   02
@@ -202,13 +202,13 @@ export default function ServicesSection() {
                   className="w-12 h-12 rounded-2xl flex items-center justify-center mb-5 group-hover:bg-white/10 transition-all duration-300 group-hover:scale-105"
                   style={{ background: "#FBF6E3" }}
                 >
-                  <ClipboardCheck size={20} strokeWidth={1.8} style={{ color: "#D4AF37" }}
+                  <ClipboardCheck size={20} strokeWidth={1.8} style={{ color: "#B49A63" }}
                     className="group-hover:!text-white/85 transition-colors duration-300" />
                 </div>
               </div>
               <div className="flex-1">
                 <h3
-                  className="font-serif font-bold leading-snug mb-2 text-[#0A2540] group-hover:text-white transition-colors duration-300"
+                  className="font-serif font-bold leading-snug mb-2 text-[#16558F] group-hover:text-white transition-colors duration-300"
                   style={{ fontSize: "1.05rem" }}
                 >
                   Health Assessments
@@ -230,7 +230,7 @@ export default function ServicesSection() {
           >
             <CardShell
               className="min-h-[200px] p-7"
-              style={{ background: "linear-gradient(135deg, #D4AF37 0%, #E2C050 100%)" }}
+              style={{ background: "linear-gradient(135deg, #B49A63 0%, #E2C050 100%)" }}
             >
               <div className="relative">
                 <span
@@ -274,7 +274,7 @@ export default function ServicesSection() {
             >
               <div className="relative">
                 <span
-                  className="absolute -top-2 -right-1 font-serif font-bold leading-none select-none text-[#0A2540]/[0.05] group-hover:text-white/[0.05] transition-colors duration-300"
+                  className="absolute -top-2 -right-1 font-serif font-bold leading-none select-none text-[#16558F]/[0.05] group-hover:text-white/[0.05] transition-colors duration-300"
                   style={{ fontSize: "4.5rem", letterSpacing: "-0.03em" }}
                 >
                   04
@@ -289,7 +289,7 @@ export default function ServicesSection() {
               </div>
               <div className="flex-1">
                 <h3
-                  className="font-serif font-bold leading-snug mb-2 text-[#0A2540] group-hover:text-white transition-colors duration-300"
+                  className="font-serif font-bold leading-snug mb-2 text-[#16558F] group-hover:text-white transition-colors duration-300"
                   style={{ fontSize: "1.05rem" }}
                 >
                   Aged Care & NDIS Nursing
@@ -315,7 +315,7 @@ export default function ServicesSection() {
             >
               <div className="relative">
                 <span
-                  className="absolute -top-2 -right-1 font-serif font-bold leading-none select-none text-[#0A2540]/[0.05] group-hover:text-white/[0.05] transition-colors duration-300"
+                  className="absolute -top-2 -right-1 font-serif font-bold leading-none select-none text-[#16558F]/[0.05] group-hover:text-white/[0.05] transition-colors duration-300"
                   style={{ fontSize: "4.5rem", letterSpacing: "-0.03em" }}
                 >
                   05
@@ -324,13 +324,13 @@ export default function ServicesSection() {
                   className="w-12 h-12 rounded-2xl flex items-center justify-center mb-5 group-hover:bg-white/10 transition-all duration-300 group-hover:scale-105"
                   style={{ background: "#FBF6E3" }}
                 >
-                  <Syringe size={20} strokeWidth={1.8} color="#D4AF37"
+                  <Syringe size={20} strokeWidth={1.8} color="#B49A63"
                     className="group-hover:!text-white/85 transition-colors duration-300" />
                 </div>
               </div>
               <div className="flex-1">
                 <h3
-                  className="font-serif font-bold leading-snug mb-2 text-[#0A2540] group-hover:text-white transition-colors duration-300"
+                  className="font-serif font-bold leading-snug mb-2 text-[#16558F] group-hover:text-white transition-colors duration-300"
                   style={{ fontSize: "1.05rem" }}
                 >
                   Blood Collection
@@ -359,7 +359,7 @@ export default function ServicesSection() {
           >
             <div className="flex flex-col sm:flex-row items-start sm:items-center gap-6 w-full">
               <span
-                className="font-serif font-bold leading-none select-none flex-shrink-0 text-[#0A2540]/[0.05] group-hover:text-white/[0.05] transition-colors duration-300"
+                className="font-serif font-bold leading-none select-none flex-shrink-0 text-[#16558F]/[0.05] group-hover:text-white/[0.05] transition-colors duration-300"
                 style={{ fontSize: "2.5rem", letterSpacing: "-0.03em" }}
               >
                 06
@@ -373,7 +373,7 @@ export default function ServicesSection() {
               </div>
               <div className="flex-1">
                 <h3
-                  className="font-serif font-bold leading-snug mb-1 text-[#0A2540] group-hover:text-white transition-colors duration-300"
+                  className="font-serif font-bold leading-snug mb-1 text-[#16558F] group-hover:text-white transition-colors duration-300"
                   style={{ fontSize: "1.05rem" }}
                 >
                   Corporate Health Services
@@ -385,7 +385,7 @@ export default function ServicesSection() {
               <div className="flex items-center gap-3 flex-shrink-0">
                 <Link
                   href="/services#corporate"
-                  className="text-[10px] font-medium tracking-[0.12em] uppercase text-[#D4AF37]"
+                  className="text-[10px] font-medium tracking-[0.12em] uppercase text-[#B49A63]"
                 >
                   Learn more
                 </Link>
@@ -401,11 +401,11 @@ export default function ServicesSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1], delay: 0.5 }}
-          className="mt-4 grid grid-cols-3 rounded-2xl overflow-hidden bg-[#0A2540]"
+          className="mt-4 grid grid-cols-3 rounded-2xl overflow-hidden bg-[#16558F]"
         >
           {[
             { dot: "#3DBB8A", label: "Available", value: "7 Days a Week" },
-            { dot: "#D4AF37", label: "Registered", value: "AHPRA Certified" },
+            { dot: "#B49A63", label: "Registered", value: "AHPRA Certified" },
             { dot: "#5B9BD5", label: "Coverage", value: "All of Australia" },
           ].map((item, i, arr) => (
             <div

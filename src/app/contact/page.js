@@ -22,7 +22,7 @@ export default function ContactPage() {
           title={
             <>
               Let's Start a <br />
-              <em style={{ color: "#C8965A", fontStyle: "italic", fontWeight: 600 }}>Conversation</em>
+              <em style={{ color: "#B49A63", fontStyle: "italic", fontWeight: 600 }}>Conversation</em>
             </>
           }
           description="If you have any questions or would like to request further information, our team is here to support you."

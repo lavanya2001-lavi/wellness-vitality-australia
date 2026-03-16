@@ -43,14 +43,14 @@ const BENTO_ITEMS = [
 
 const variantStyles = {
   navy: {
-    wrapper: "bg-[#0A2540]",
+    wrapper: "bg-[#16558F]",
     iconBg: "bg-white/10",
     iconColor: "rgba(255,255,255,0.85)",
     title: "text-white",
     desc: "text-white/60",
   },
   gold: {
-    wrapper: "bg-gradient-to-br from-[#C8965A] to-[#DDA96A]",
+    wrapper: "bg-gradient-to-br from-[#B49A63] to-[#B49A63]",
     iconBg: "bg-white/20",
     iconColor: "rgba(255,255,255,0.85)",
     title: "text-white",
@@ -60,14 +60,14 @@ const variantStyles = {
     wrapper: "bg-white border border-[#E8EEF5]",
     iconBg: "bg-[#EAF3FF]",
     iconColor: "#16558F",
-    title: "text-[#0A2540]",
+    title: "text-[#16558F]",
     desc: "text-[#6B7A8D]",
   },
   muted: {
     wrapper: "bg-[#F0F5FF] border border-[#E0EBFF]",
     iconBg: "bg-[#D8E8FF]",
     iconColor: "#16558F",
-    title: "text-[#0A2540]",
+    title: "text-[#16558F]",
     desc: "text-[#6B7A8D]",
   },
 };
@@ -86,16 +86,16 @@ export default function WhyChooseSection() {
           className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6 mb-10"
         >
           <div>
-            <p className="text-[0.65rem] font-bold tracking-[0.28em] uppercase text-[#C8965A] mb-4">
+            <p className="text-[0.65rem] font-bold tracking-[0.28em] uppercase text-[#B49A63] mb-4">
               Why Choose Us
             </p>
             <h2
-              className="font-serif font-bold text-[#0A2540] leading-[1.08] tracking-tight"
+              className="font-serif font-bold text-[#16558F] leading-[1.08] tracking-tight"
               style={{ fontSize: "clamp(2rem, 4vw, 3rem)" }}
             >
               Healthcare you can
               <br />
-              <span className="italic text-[#C8965A]">trust and rely on</span>
+              <span className="italic text-[#B49A63]">trust and rely on</span>
             </h2>
           </div>
           <p className="text-[0.95rem] text-[#6B7A8D] leading-relaxed font-light max-w-[42ch] lg:text-right">
@@ -129,7 +129,7 @@ export default function WhyChooseSection() {
                     className="font-serif font-bold leading-none mb-2"
                     style={{
                       fontSize: "clamp(2rem, 4vw, 2.8rem)",
-                      color: item.variant === "muted" ? "#0A2540" : "#0A2540",
+                      color: item.variant === "muted" ? "#16558F" : "#16558F",
                     }}
                   >
                     {item.stat}
@@ -185,7 +185,7 @@ export default function WhyChooseSection() {
               <Users size={18} strokeWidth={1.8} style={{ color: "#B49A63" }} />
             </div>
             <div>
-              <h4 className="font-serif font-bold text-[1rem] leading-snug mb-2 text-[#0A2540]">
+              <h4 className="font-serif font-bold text-[1rem] leading-snug mb-2 text-[#16558F]">
                 Aged care & NDIS support
               </h4>
               <p className="text-[0.78rem] leading-relaxed font-light text-[#6B7A8D]">
@@ -202,21 +202,21 @@ export default function WhyChooseSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ delay: 0.5, duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-          className="mt-10 flex flex-col sm:flex-row items-center justify-between gap-6 bg-[#0A2540] rounded-[22px] px-8 py-6"
+          className="mt-10 flex flex-col sm:flex-row items-center justify-between gap-6 bg-[#16558F] rounded-[22px] px-8 py-6"
         >
           <div className="flex items-center gap-4">
             <span className="w-2.5 h-2.5 rounded-full bg-[#3DBB8A] animate-pulse flex-shrink-0" />
             <p className="text-white font-light text-[0.95rem]">
               Ready to experience{" "}
-              <span className="font-medium text-[#C8965A]">nurse-led care at home?</span>
+              <span className="font-medium text-[#B49A63]">nurse-led care at home?</span>
             </p>
           </div>
           <a
             href="/booking"
             className="flex-shrink-0 px-7 py-3 rounded-full text-white font-medium text-[0.88rem] transition-all duration-200 hover:-translate-y-0.5"
             style={{
-              background: "#C8965A",
-              boxShadow: "0 6px 20px rgba(200,150,90,0.38)",
+              background: "#B49A63",
+              boxShadow: "0 6px 20px rgba(180,154,99,0.38)",
               letterSpacing: "0.03em",
             }}
           >

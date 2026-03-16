@@ -21,7 +21,7 @@ export default function AboutPage() {
           title={
             <>
               Dedicated to Your <br />
-              <em style={{ color: "#C8965A", fontStyle: "italic", fontWeight: 600 }}>Wellness & Vitality</em>
+              <em style={{ color: "#B49A63", fontStyle: "italic", fontWeight: 600 }}>Wellness & Vitality</em>
             </>
           }
           description="Wellness Vitality Australia is a nurse-led mobile healthcare provider dedicated to delivering premium clinical services and wellness infusions across Melbourne and surrounding areas."
