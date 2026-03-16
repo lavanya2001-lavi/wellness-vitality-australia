@@ -1,173 +1,253 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Button } from "../shared/primaryButton";
-import Container from "../shared/Container";
-import { ShieldCheck, Sparkles } from "lucide-react";
+import { ShieldCheck, Sparkles, Home } from "lucide-react";
+import FluidCanvas from "../shared/FluidCanvas";
 
 export default function Hero() {
   return (
-    <section className="relative min-h-[90vh] lg:min-h-screen flex items-center overflow-hidden bg-[#FBFDFF]">
-      
-      {/* ── Soft Abstract Ambient Background ── */}
-      <div className="absolute inset-0 -z-10 overflow-hidden pointer-events-none">
-        {/* Primary Liquid Orb — top left */}
-        <motion.div
-          animate={{ x: [0, 40, 0], y: [0, -30, 0], scale: [1, 1.1, 1] }}
-          transition={{ duration: 20, repeat: Infinity, ease: "easeInOut" }}
-          className="absolute -top-[25%] -left-[15%] w-[60vw] h-[60vw] max-w-[800px] max-h-[800px]"
-          style={{
-            background: "radial-gradient(circle at 40% 40%, #D8E9FF 0%, #F0F8FF 50%, transparent 75%)",
-            filter: "blur(100px)",
-            opacity: 0.7,
-          }}
-        />
+    <section className="relative min-h-screen w-full overflow-hidden bg-[#0A2540]">
 
-        {/* Secondary Liquid Orb — right */}
-        <motion.div
-          animate={{ x: [0, -30, 0], y: [0, 40, 0], scale: [1, 1.15, 1] }}
-          transition={{ duration: 25, repeat: Infinity, ease: "easeInOut" }}
-          className="absolute -top-[10%] -right-[20%] w-[55vw] h-[55vw] max-w-[750px] max-h-[750px]"
-          style={{
-            background: "radial-gradient(circle at 60% 40%, #E3F2FD 0%, #FAFDFF 50%, transparent 75%)",
-            filter: "blur(110px)",
-            opacity: 0.6,
-          }}
+      {/* ── Background ── */}
+      <div className="absolute inset-0 z-0">
+        <FluidCanvas />
+        <div
+          className="absolute inset-0 pointer-events-none z-10 opacity-[0.05]"
+          style={{ backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")` }}
         />
-
-        {/* Brand Accent Orb — bottom center */}
-        <motion.div
-          animate={{ x: [0, 25, 0], y: [0, -20, 0] }}
-          transition={{ duration: 22, repeat: Infinity, ease: "easeInOut", delay: 2 }}
-          className="absolute bottom-[-15%] left-[20%] w-[45vw] h-[45vw] max-w-[600px] max-h-[600px]"
-          style={{
-            background: "radial-gradient(circle at 50% 50%, #F5EDD8 0%, #FCF9F2 45%, transparent 70%)",
-            filter: "blur(120px)",
-            opacity: 0.4,
-          }}
+        <div
+          className="absolute bottom-0 left-0 right-0 h-64 z-20"
+          style={{ background: "linear-gradient(to top, #0A2540 0%, transparent 100%)" }}
         />
-
-        {/* Subtle Water-Inspired Texture Overlay */}
-        <div className="absolute inset-0 opacity-[0.03] mix-blend-overlay"
-          style={{ backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")` }} />
       </div>
 
-      <Container className="pt-32 pb-20">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-12 items-center">
-          
-          {/* 🚀 Left Content: Messaging */}
-          <div className="flex flex-col items-center lg:items-start text-center lg:text-left order-2 lg:order-1">
-            
-            {/* Professional Badge */}
-            <motion.div
-              initial={{ opacity: 0, y: 15 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-              className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-primary/10 bg-white shadow-sm ring-1 ring-primary/5 mb-8"
-            >
-              <Sparkles size={14} className="text-secondary" />
-              <span className="text-[0.65rem] font-bold tracking-[0.25em] uppercase text-primary/80">
-                Premium Nurse-Led Healthcare
-              </span>
-            </motion.div>
+      {/* ── Nurse Cut-out Image ── */}
+      <div className="absolute right-0 bottom-0 z-10 hidden lg:flex items-end justify-end pointer-events-none w-1/2 h-full">
+        <motion.div
+          initial={{ opacity: 0, scale: 1.05 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 1.5, ease: [0.16, 1, 0.3, 1], delay: 0.6 }}
+          className="relative w-full h-full flex items-center justify-end"
+          style={{ paddingRight: "14%" }}
+        >
+          {/* Back glow */}
+          <div
+            className="absolute inset-x-0 bottom-0 h-2/3 opacity-30 blur-[120px]"
+            style={{ background: "radial-gradient(circle at center, rgba(200,150,90,0.3) 0%, transparent 70%)" }}
+          />
 
-            {/* Headline */}
-            <motion.h1
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 1, delay: 0.15, ease: [0.16, 1, 0.3, 1] }}
-              className="font-serif font-bold text-primary leading-[1.05] tracking-tight mb-8"
-              style={{ fontSize: "clamp(3rem, 6vw, 4.8rem)" }}
-            >
-              Professional Wellness<br />
-              <span className="text-secondary italic">Tailored to You</span>
-            </motion.h1>
+          <img
+            src="/assets/hero_nurse_on_navy.png"
+            alt="Hero Nurse Clinician"
+            className="w-auto object-contain select-none"
+            style={{
+              height: "92vh",
+              marginBottom: "-4vh",
+              WebkitMaskImage: "linear-gradient(to right, transparent 5%, black 40%, black 85%, transparent 100%), linear-gradient(to bottom, black 85%, transparent 100%)",
+              maskImage: "linear-gradient(to right, transparent 5%, black 40%, black 85%, transparent 100%), linear-gradient(to bottom, black 85%, transparent 100%)",
+              WebkitMaskComposite: "source-in",
+              maskComposite: "intersect",
+            }}
+          />
+        </motion.div>
+      </div>
 
-            {/* Sub-description */}
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 1, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
-              className="text-lg md:text-xl text-text-primary/70 leading-relaxed max-w-[45ch] mb-10 font-light"
-            >
-              Discover a new standard of personalized clinical excellence. Nurse-led treatments designed to support energy, immunity and recovery — delivered safely at your location.
-            </motion.p>
+      {/* ── Hero Content ── */}
+      <div className="relative z-10 flex items-center min-h-screen">
+        <div className="px-12 pb-32 pt-36 max-w-[560px]">
 
-            {/* Actions */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 1, delay: 0.45, ease: [0.16, 1, 0.3, 1] }}
-              className="flex flex-col sm:flex-row gap-5"
-            >
-              <Button variant="cta" href="/booking" className="px-12 py-5 text-lg shadow-2xl shadow-primary/10">
-                Schedule Appointment
-              </Button>
-              <Button
-                variant="outline"
-                href="#services"
-                className="px-10 py-5 text-lg border-primary/20 text-primary hover:bg-primary/5 transition-all duration-300"
-              >
-                Our Services
-              </Button>
-            </motion.div>
-          </div>
-
-          {/* 🖼️ Right Visual: High-Impact Image */}
+          {/* Badge */}
           <motion.div
-            initial={{ opacity: 0, x: 50, scale: 0.98 }}
-            animate={{ opacity: 1, x: 0, scale: 1 }}
-            transition={{ duration: 1.5, ease: [0.16, 1, 0.3, 1] }}
-            className="relative lg:ml-auto w-full max-w-[560px] order-1 lg:order-2"
+            initial={{ opacity: 0, y: 16 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1], delay: 0.15 }}
+            className="inline-flex items-center gap-2 rounded-full px-4 py-2 mb-7"
+            style={{
+              background: "rgba(200,150,90,0.12)",
+              border: "1px solid rgba(200,150,90,0.32)",
+            }}
           >
-            {/* Main Floating Image Container */}
-            <motion.div
-              animate={{ y: [0, -12, 0] }}
-              transition={{ duration: 7, repeat: Infinity, ease: "easeInOut" }}
-              className="relative aspect-[4/5] rounded-[2.5rem] md:rounded-[3.5rem] overflow-hidden shadow-[0_40px_80px_-15px_rgba(10,37,64,0.18)] border-[12px] border-white z-10"
+            <div
+              className="w-6 h-6 rounded-full flex items-center justify-center flex-shrink-0"
+              style={{ background: "#C8965A" }}
             >
-              <img
-                src="/images/home-hero.png"
-                alt="Professional Healthcare Clinician"
-                className="w-full h-full object-cover"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-primary/10 via-transparent to-transparent" />
-            </motion.div>
-
-            {/* Decorative Offset Soft Border */}
-            <div className="absolute -bottom-6 -right-6 w-full h-full border-2 border-primary/5 rounded-[3rem] md:rounded-[4rem] -z-10 translate-x-4 translate-y-4" />
-
-            {/* Credibility Floating Badge — bottom left */}
-            <motion.div
-              initial={{ opacity: 0, scale: 0.8 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ delay: 1, duration: 1 }}
-              className="absolute -bottom-8 -left-4 md:-left-12 bg-white rounded-3xl p-5 md:p-6 shadow-2xl border border-primary/5 z-20 flex items-center gap-4"
+              <Sparkles size={11} color="white" />
+            </div>
+            <span
+              className="text-[#C8965A] font-medium"
+              style={{ fontSize: "10px", letterSpacing: "0.2em", textTransform: "uppercase" }}
             >
-              <div className="w-12 h-12 rounded-2xl bg-primary/5 flex items-center justify-center text-primary shadow-inner">
-                <ShieldCheck size={28} strokeWidth={1.5} />
-              </div>
-              <div className="pr-4">
-                <p className="text-[0.62rem] font-bold uppercase tracking-widest text-secondary leading-none mb-1">Authenticated</p>
-                <h4 className="font-serif font-bold text-primary text-base md:text-lg leading-tight">AHPRA Registered</h4>
-              </div>
-            </motion.div>
+              Premium Nurse-Led Healthcare
+            </span>
+          </motion.div>
 
-            {/* Dynamic Excellence Pill — top right */}
-            <motion.div
-              initial={{ opacity: 0, x: 20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ delay: 1.3, duration: 0.8 }}
-              className="absolute -top-6 -right-4 md:-right-8 px-5 py-3 rounded-2xl bg-white/80 backdrop-blur-xl border border-white shadow-lg z-20 hidden md:flex items-center gap-3"
+          {/* Headline */}
+          <motion.h1
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.85, ease: [0.16, 1, 0.3, 1], delay: 0.28 }}
+            className="text-white font-bold leading-[1.04] tracking-tight mb-5"
+            style={{
+              fontFamily: "'Cormorant Garamond', serif",
+              fontSize: "clamp(2.8rem, 5.2vw, 4.5rem)",
+            }}
+          >
+            Your Trusted<br />
+            Partner in{" "}
+            <em style={{ color: "#C8965A", fontStyle: "italic", fontWeight: 600 }}>
+              Wellness
+            </em>
+          </motion.h1>
+
+          {/* Motto */}
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.85, ease: [0.16, 1, 0.3, 1], delay: 0.42 }}
+            className="font-medium mb-3 leading-relaxed"
+            style={{ fontSize: "1.05rem", color: "rgba(255,255,255,0.9)" }}
+          >
+            Expert care delivered to your doorstep.
+          </motion.p>
+
+          {/* Description */}
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.85, ease: [0.16, 1, 0.3, 1], delay: 0.52 }}
+            className="font-light leading-relaxed mb-10"
+            style={{ fontSize: "0.93rem", color: "rgba(255,255,255,0.52)", maxWidth: "42ch" }}
+          >
+            Nurse-led IV therapy, vitamin infusions &amp; recovery treatments —
+            personalised for your needs and brought directly to you.
+          </motion.p>
+
+          {/* CTA Buttons */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.85, ease: [0.16, 1, 0.3, 1], delay: 0.62 }}
+            className="flex flex-col sm:flex-row gap-4 mb-8"
+          >
+            <a
+              href="/booking"
+              className="inline-flex items-center justify-center px-9 py-4 rounded-full text-white font-medium transition-all duration-200 hover:-translate-y-0.5"
+              style={{
+                background: "#C8965A",
+                fontSize: "0.9rem",
+                letterSpacing: "0.04em",
+                boxShadow: "0 8px 28px rgba(200,150,90,0.42)",
+              }}
             >
-              <div className="w-2.5 h-2.5 rounded-full bg-secondary animate-pulse" />
-              <span className="text-xs font-bold text-primary tracking-wide">Clinical Excellence</span>
-            </motion.div>
+              Schedule Appointment
+            </a>
+            <a
+              href="#services"
+              className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full font-light transition-all duration-200 hover:border-white/60 hover:text-white"
+              style={{
+                border: "1.5px solid rgba(255,255,255,0.25)",
+                color: "rgba(255,255,255,0.78)",
+                fontSize: "0.9rem",
+                letterSpacing: "0.03em",
+              }}
+            >
+              Our Services
+              <span
+                className="w-5 h-5 rounded-full flex items-center justify-center flex-shrink-0"
+                style={{ border: "1px solid rgba(255,255,255,0.35)" }}
+              >
+                <svg width="9" height="9" viewBox="0 0 10 10" fill="none">
+                  <path d="M2 8L8 2M8 2H3M8 2V7" stroke="white" strokeWidth="1.5" strokeLinecap="round" />
+                </svg>
+              </span>
+            </a>
+          </motion.div>
 
+          {/* Website tag */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.85, ease: [0.16, 1, 0.3, 1], delay: 0.75 }}
+            className="flex items-center gap-2"
+          >
+            <Home size={13} color="#C8965A" />
+            <span style={{ fontSize: "11.5px", color: "rgba(255,255,255,0.45)", letterSpacing: "0.04em" }}>
+              Available at{" "}
+              <span style={{ color: "rgba(200,150,90,0.85)", fontWeight: 500 }}>
+                www.wellnessvitalityaustralia.com.au
+              </span>
+            </span>
           </motion.div>
 
         </div>
-      </Container>
+      </div>
+
+      {/* ── Service Bar ── */}
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.85, ease: [0.16, 1, 0.3, 1], delay: 0.88 }}
+        className="absolute bottom-0 left-0 right-0 z-20 flex items-center justify-center pb-8 px-12"
+      >
+        {[
+          {
+            label: "Services",
+            icon: (
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#C8965A" strokeWidth="1.3">
+                <path d="M12 2C8 2 5 5 5 9c0 5 7 13 7 13s7-8 7-13c0-4-3-7-7-7z" strokeLinecap="round" />
+                <circle cx="12" cy="9" r="2.5" />
+              </svg>
+            ),
+          },
+          {
+            label: "Treatments",
+            icon: (
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#C8965A" strokeWidth="1.3">
+                <path d="M19 3H5a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2V5a2 2 0 00-2-2zM12 8v8M8 12h8" strokeLinecap="round" />
+              </svg>
+            ),
+          },
+          {
+            label: "Practitioners",
+            icon: (
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#C8965A" strokeWidth="1.3">
+                <path d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" strokeLinecap="round" />
+              </svg>
+            ),
+          },
+          {
+            label: "Nurtureship",
+            icon: (
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#C8965A" strokeWidth="1.3">
+                <path d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.52 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118L2.98 10.1c-.783-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.52-4.674z" strokeLinecap="round" />
+              </svg>
+            ),
+          },
+        ].map((item, i, arr) => (
+          <a
+            key={item.label}
+            href={`#${item.label.toLowerCase()}`}
+            className="flex flex-col items-center gap-2 px-10 cursor-pointer transition-opacity duration-200 hover:opacity-70"
+            style={{
+              borderRight: i < arr.length - 1 ? "1px solid rgba(255,255,255,0.1)" : "none",
+            }}
+          >
+            {item.icon}
+            <span
+              className="font-medium"
+              style={{
+                fontSize: "9.5px",
+                letterSpacing: "0.15em",
+                textTransform: "uppercase",
+                color: "rgba(255,255,255,0.5)",
+              }}
+            >
+              {item.label}
+            </span>
+          </a>
+        ))}
+      </motion.div>
+
     </section>
   );
 }
