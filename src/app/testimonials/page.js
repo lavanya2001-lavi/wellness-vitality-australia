@@ -8,6 +8,8 @@ import { SectionHeader } from '../../components/shared/sectionHeading';
 import { TestimonialCard } from '../../components/shared/TestimonialCard';
 import { CTASection } from '../../components/shared/CTASection';
 import { ClinicalDisclaimer } from '../../components/shared/ClinicalDisclaimer';
+import Hero from '../../components/shared/Hero';
+import { Star } from 'lucide-react';
 
 const TESTIMONIALS = [
   {
@@ -46,15 +48,22 @@ export default function Testimonials() {
   return (
     <div className="min-h-screen bg-background flex flex-col">
       <Navbar />
-      <main className="flex-grow pt-24">
+      <main className="flex-grow">
+        <Hero 
+          layout="centered"
+          badgeIcon={Star}
+          badgeText="Patient Experiences"
+          title={
+            <>
+              Kind Words from <br />
+              <em style={{ color: "#C8965A", fontStyle: "italic", fontWeight: 600 }}>Our Patients</em>
+            </>
+          }
+          description="Read about the experiences of our patients and the positive results they've achieved through our clinical wellness services."
+        />
         <Section className="bg-accent/30">
           <Container>
-            <SectionHeader 
-              title="Patient Testimonials" 
-              subtitle="Read about the experiences of our patients and the positive results they've achieved through our clinical wellness services."
-            />
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-16">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-8">
               {TESTIMONIALS.map((t, i) => (
                 <TestimonialCard key={i} {...t} />
               ))}

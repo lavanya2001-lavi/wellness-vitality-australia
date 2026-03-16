@@ -5,6 +5,7 @@ import { Target } from "lucide-react";
 import { SectionHeading } from "../shared/Container";
 import Section from "../shared/sectionWrapper";
 import Container from "../shared/Container";
+import Link from "next/link";
 
 export default function MissionSection() {
   return (
@@ -24,6 +25,12 @@ export default function MissionSection() {
                 <p className="font-bold text-primary font-serif text-lg">Patient-Centred Care</p>
                 <p className="text-gray-500 text-sm">Every treatment is tailored to individual patient needs.</p>
               </div>
+            </div>
+            <div className="mt-8">
+              <Link href="/services" className="inline-flex items-center gap-2 px-8 py-4 rounded-full bg-primary text-white font-medium text-sm tracking-wide transition-all duration-200 hover:-translate-y-0.5 hover:shadow-xl hover:shadow-primary/20">
+                Explore Our Services
+                <span className="text-lg">→</span>
+              </Link>
             </div>
           </motion.div>
 

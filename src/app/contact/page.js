@@ -3,8 +3,9 @@
 import Navbar from '../../components/shared/navBar';
 import Footer from '../../components/shared/footerSection';
 import { ClinicalDisclaimer } from '../../components/shared/ClinicalDisclaimer';
+import Hero from '../../components/shared/Hero';
+import { MessageCircle } from 'lucide-react';
 
-import ContactHeroSection from '../../components/contact/contactHeroSection';
 import ContactFormSection from '../../components/contact/contactFormSection';
 import ContactInfoSection from '../../components/contact/contactInfoSection';
 import WhatsAppSection from '../../components/contact/whatsAppSection';
@@ -14,7 +15,18 @@ export default function ContactPage() {
     <div className="min-h-screen bg-background flex flex-col">
       <Navbar />
       <main className="flex-grow">
-        <ContactHeroSection />
+        <Hero 
+          layout="centered"
+          badgeIcon={MessageCircle}
+          badgeText="Connect With Us"
+          title={
+            <>
+              Let's Start a <br />
+              <em style={{ color: "#C8965A", fontStyle: "italic", fontWeight: 600 }}>Conversation</em>
+            </>
+          }
+          description="If you have any questions or would like to request further information, our team is here to support you."
+        />
         <ContactFormSection />
         <ContactInfoSection />
         <WhatsAppSection />

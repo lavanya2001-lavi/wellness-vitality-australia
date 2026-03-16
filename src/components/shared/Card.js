@@ -13,7 +13,7 @@ export function Card({ children, className = "" }) {
   );
 }
 
-export function ServiceCard({ title, description, icon, href = "#" }) {
+export function ServiceCard({ title, description, icon, href = "/services" }) {
   return (
     <Card className="flex flex-col h-full group">
       <div className="w-16 h-16 rounded-2xl bg-accent flex items-center justify-center mb-8 text-primary group-hover:bg-primary group-hover:text-white transition-colors duration-500">

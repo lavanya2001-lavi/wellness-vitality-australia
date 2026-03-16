@@ -8,6 +8,8 @@ import { SectionHeader } from '../../components/shared/sectionHeading';
 import { FAQAccordion } from '../../components/shared/FAQAccordion';
 import { CTASection } from '../../components/shared/CTASection';
 import { ClinicalDisclaimer } from '../../components/shared/ClinicalDisclaimer';
+import Hero from '../../components/shared/Hero';
+import { HelpCircle } from 'lucide-react';
 
 const FAQS = [
   {
@@ -36,15 +38,22 @@ export default function FAQs() {
   return (
     <div className="min-h-screen bg-background flex flex-col">
       <Navbar />
-      <main className="flex-grow pt-24">
+      <main className="flex-grow">
+        <Hero 
+          layout="centered"
+          badgeIcon={HelpCircle}
+          badgeText="Information Center"
+          title={
+            <>
+              Frequently Asked <br />
+              <em style={{ color: "#C8965A", fontStyle: "italic", fontWeight: 600 }}>Questions</em>
+            </>
+          }
+          description="Find answers to common questions about our clinical wellness therapies, safety protocols, and what to expect during your visit."
+        />
         <Section>
           <Container>
-            <SectionHeader 
-              title="Frequently Asked Questions" 
-              subtitle="Find answers to common questions about our clinical wellness therapies, safety protocols, and what to expect during your visit."
-            />
-            
-            <div className="mt-16">
+            <div className="mt-8">
               <FAQAccordion items={FAQS} />
             </div>
           </Container>

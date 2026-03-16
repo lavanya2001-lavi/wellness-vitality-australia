@@ -61,6 +61,12 @@ export default function TeethWhiteningSection() {
                 </div>
               ))}
             </div>
+            <div className="mt-10">
+              <a href="/booking" className="inline-flex items-center gap-2 px-8 py-4 rounded-full bg-primary text-white font-medium text-sm tracking-wide transition-all duration-200 hover:-translate-y-0.5 hover:shadow-xl hover:shadow-primary/20">
+                Book Teeth Whitening
+                <span className="text-lg">→</span>
+              </a>
+            </div>
           </motion.div>
         </div>
       </Container>
