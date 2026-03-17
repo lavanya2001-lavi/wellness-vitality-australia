@@ -18,6 +18,7 @@ export default function BookingPage() {
           layout="centered"
           badgeIcon={Calendar}
           badgeText="Secure Bookings"
+          videoSrc="/videos/bookingbg.mp4"
           title={
             <>
               Book Your <br />

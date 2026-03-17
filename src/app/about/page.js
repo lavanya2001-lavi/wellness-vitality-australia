@@ -18,6 +18,7 @@ export default function AboutPage() {
         <Hero 
           badgeIcon={Users}
           badgeText="Our Professional Team"
+          videoSrc="/videos/aboutbgvideo.mp4"
           title={
             <>
               Dedicated to Your <br />

@@ -22,6 +22,7 @@ export default function ServicesPage() {
         <Hero 
           badgeIcon={Stethoscope}
           badgeText="Clinical & Wellness Services"
+          videoSrc="/videos/services.mp4"
           title={
             <>
               Qualified Nursing <br />
