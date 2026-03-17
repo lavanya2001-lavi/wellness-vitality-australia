@@ -19,6 +19,7 @@ export default function ContactPage() {
           layout="centered"
           badgeIcon={MessageCircle}
           badgeText="Connect With Us"
+          videoSrc="/videos/aboutbgvideo.mp4"
           title={
             <>
               Let's Start a <br />

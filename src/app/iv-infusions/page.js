@@ -19,6 +19,7 @@ export default function IvInfusionsPage() {
         <Hero 
           badgeIcon={Droplet}
           badgeText="Intravenous Wellness"
+          videoSrc="/videos/bgvideo.mp4"
           title={
             <>
               Direct Nutrient <br />
