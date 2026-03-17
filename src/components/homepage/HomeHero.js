@@ -178,11 +178,11 @@ export default function HomeHero() {
                 }}
               >
                 <Droplets size={16} />
-                Book IV Infusion
+                Book Now
               </Link>
 
               <Link
-                href="/contact"
+                href="/services"
                 className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full font-medium transition-all duration-300 hover:-translate-y-0.5 hover:bg-white/12"
                 style={{
                   background: "rgba(255,255,255,0.06)",
@@ -193,7 +193,7 @@ export default function HomeHero() {
                   letterSpacing: "0.03em",
                 }}
               >
-                Enquire Now
+                View Services
                 <Sparkles size={15} className="opacity-55" />
               </Link>
             </motion.div>
