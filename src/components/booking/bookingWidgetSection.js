@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { Calendar, Clock, CheckCircle } from "lucide-react";
 import Section from "../shared/sectionWrapper";
 import Container from "../shared/Container";
+import BookingForm from "./BookingForm";
 
 export default function BookingWidgetSection() {
   return (
@@ -29,19 +30,8 @@ export default function BookingWidgetSection() {
             ))}
           </div>
 
-          {/* Calendly Integration Placeholder */}
-          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}
-            className="relative p-12 md:p-16 rounded-[3rem] bg-white/60 backdrop-blur-xl border-2 border-dashed border-primary/30 shadow-[0_8px_30px_rgb(0,0,0,0.02)] text-center overflow-hidden">
-            <div className="absolute inset-0 bg-primary/[0.02]" />
-            <div className="relative z-10 w-20 h-20 mx-auto rounded-3xl bg-primary/5 flex items-center justify-center mb-8 text-primary shadow-[0_0_20px_rgba(22,85,143,0.1)]">
-              <Calendar size={40} strokeWidth={1.5} />
-            </div>
-            <h3 className="relative z-10 text-2xl md:text-3xl font-bold text-primary font-serif mb-4">Online Booking</h3>
-            <p className="relative z-10 text-gray-500 mb-2 max-w-lg mx-auto text-[15px] leading-relaxed">
-              Our Calendly booking widget will be integrated here. Patients will be able to select their preferred IV treatment, date and time.
-            </p>
-            <p className="relative z-10 text-xs text-primary/60 uppercase tracking-wider font-semibold mt-6">Calendly Integration — Coming Soon</p>
-          </motion.div>
+          {/* Premium Booking Form */}
+          <BookingForm />
         </div>
       </Container>
     </Section>

@@ -22,7 +22,7 @@ export default function BookingPage() {
           title={
             <>
               Book Your <br />
-              <em style={{ color: "#B49A63", fontStyle: "italic", fontWeight: 600 }}>Wellness Experience</em>
+              <em style={{ color: "#B49A63", fontStyle: "italic", fontWeight: 600 }}>Appointment</em>
             </>
           }
           description="Simple, secure, and clinical. Select your treatment and preferred time below to start your journey to vitality."

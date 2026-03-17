@@ -19,7 +19,7 @@ const stats = [
     icon: History,
   },
   {
-    label: "Wellness Programs",
+    label: "Wellness Programmes",
     value: 20,
     suffix: "+",
     icon: Activity,

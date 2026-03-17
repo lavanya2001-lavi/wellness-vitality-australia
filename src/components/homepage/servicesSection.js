@@ -379,7 +379,7 @@ export default function ServicesSection() {
                   Corporate Health Services
                 </h3>
                 <p className="text-[0.77rem] font-light leading-relaxed text-[#6B7A8D] group-hover:text-white/55 transition-colors duration-300">
-                  Staff wellness programs and onsite health checks for modern workplaces — tailored to your team's needs.
+                  Staff wellness programmes and onsite health checks for modern workplaces — tailored to your team's needs.
                 </p>
               </div>
               <div className="flex items-center gap-3 flex-shrink-0">
