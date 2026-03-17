@@ -3,7 +3,7 @@
 import Navbar from '../components/shared/navBar';
 import Footer from '../components/shared/footerSection';
 import { ClinicalDisclaimer } from '../components/shared/ClinicalDisclaimer';
-import HeroSection from '../components/homepage/heroSection';
+import HomeHero from '../components/homepage/HomeHero';
 
 import WhyChooseSection from '../components/homepage/whyChooseSection';
 import StatsSection from '../components/homepage/statsSection';
@@ -19,7 +19,7 @@ export default function Home() {
     <div className="min-h-screen bg-background flex flex-col">
       <Navbar />
       <main className="flex-grow">
-        <HeroSection />
+        <HomeHero />
         <WhyChooseSection />
         <StatsSection />
         <ServicesSection />
