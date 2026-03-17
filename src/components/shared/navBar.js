@@ -58,15 +58,11 @@ export default function Navbar() {
         >
           <motion.div
             animate={{
-              background: scrolled
-                ? "rgba(255,255,255,0.97)"
-                : "rgba(255,255,255,0.07)",
-              borderColor: scrolled
-                ? "rgba(22,85,143,0.08)"
-                : "rgba(255,255,255,0.14)",
+              background: "rgba(255,255,255,1)",
+              borderColor: "rgba(22,85,143,0.08)",
               boxShadow: scrolled
                 ? "0 4px 32px rgba(22,85,143,0.12)"
-                : "0 8px 32px rgba(0,0,0,0.18)",
+                : "0 2px 16px rgba(22,85,143,0.07)",
             }}
             transition={{ duration: 0.4, ease: "easeInOut" }}
             className="flex items-center justify-between px-4 py-2 rounded-full border backdrop-blur-xl"
@@ -100,9 +96,7 @@ export default function Navbar() {
                     style={{
                       color: isActive
                         ? "#B49A63"
-                        : scrolled
-                          ? isHovered ? "#16558F" : "#6B7A8D"
-                          : isHovered ? "white" : "rgba(255,255,255,0.65)",
+                        : isHovered ? "#16558F" : "#6B7A8D",
                       fontWeight: isActive ? 600 : 500,
                     }}
                   >
@@ -112,9 +106,7 @@ export default function Navbar() {
                         layoutId="navHoverPill"
                         className="absolute inset-0 rounded-full -z-10"
                         style={{
-                          background: scrolled
-                            ? "rgba(22,85,143,0.05)"
-                            : "rgba(255,255,255,0.1)",
+                          background: "rgba(22,85,143,0.05)",
                         }}
                         transition={{ type: "spring", stiffness: 400, damping: 30 }}
                       />
@@ -178,10 +170,8 @@ export default function Navbar() {
                 onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
                 className="p-2 rounded-full transition-colors duration-200"
                 style={{
-                  background: scrolled
-                    ? "rgba(22,85,143,0.06)"
-                    : "rgba(255,255,255,0.1)",
-                  color: scrolled ? "#16558F" : "white",
+                  background: "rgba(22,85,143,0.06)",
+                  color: "#16558F",
                 }}
                 aria-label={mobileMenuOpen ? "Close menu" : "Open menu"}
               >
@@ -224,12 +214,13 @@ export default function Navbar() {
                 {/* Drawer header */}
                 <div className="h-20 flex items-center justify-between px-6"
                   style={{ borderBottom: "1px solid #F0F4F8" }}>
-                  <span
-                    className="font-serif font-bold text-[#16558F]"
-                    style={{ fontSize: "1.1rem" }}
-                  >
-                    Wellness Vitality
-                  </span>
+                  <Image
+                    src="/logo.png"
+                    alt="Wellness Vitality Australia"
+                    width={160}
+                    height={46}
+                    className="h-9 w-auto object-contain"
+                  />
                   <button
                     onClick={() => setMobileMenuOpen(false)}
                     className="p-2 rounded-full bg-gray-50 text-gray-400 hover:text-gray-600"
