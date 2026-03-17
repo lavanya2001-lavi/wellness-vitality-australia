@@ -42,7 +42,7 @@ export default function FAQs() {
         <Hero 
           layout="centered"
           badgeIcon={HelpCircle}
-          badgeText="Information Center"
+          badgeText="Information Centre"
           title={
             <>
               Frequently Asked <br />
