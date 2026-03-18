@@ -34,15 +34,13 @@ const stats = [
 
 function Counter({ value, suffix }) {
   const ref = useRef(null);
-  const inView = useInView(ref, { once: true, margin: "-100px" });
+  const inView = useInView(ref, { once: true, margin: "-80px" });
   const spring = useSpring(0, { mass: 1, stiffness: 100, damping: 30 });
   const displayValue = useTransform(spring, (current) => Math.round(current));
   const [currentValue, setCurrentValue] = useState(0);
 
   useEffect(() => {
-    if (inView) {
-      spring.set(value);
-    }
+    if (inView) spring.set(value);
   }, [inView, value, spring]);
 
   useEffect(() => {
@@ -50,11 +48,17 @@ function Counter({ value, suffix }) {
   }, [displayValue]);
 
   return (
-    <span ref={ref} className="inline-flex items-baseline">
-      <span className="text-4xl md:text-5xl font-bold text-primary font-serif">
+    <span ref={ref} className="inline-flex items-baseline gap-0.5">
+      <span
+        className="font-serif font-bold leading-none"
+        style={{ fontSize: "clamp(2rem, 3.5vw, 2.8rem)", color: "#16558F" }}
+      >
         {currentValue}
       </span>
-      <span className="text-xl md:text-2xl font-bold text-secondary ml-1">
+      <span
+        className="font-bold"
+        style={{ fontSize: "clamp(0.95rem, 1.5vw, 1.2rem)", color: "#4FA3D1" }}
+      >
         {suffix}
       </span>
     </span>
@@ -63,25 +67,71 @@ function Counter({ value, suffix }) {
 
 export default function StatsSection() {
   return (
-    <section className="py-20 bg-white border-y border-primary/5">
+    <section
+      className="py-10 lg:py-12"
+      style={{
+        background: "white",
+        borderTop: "1px solid rgba(22,85,143,0.07)",
+        borderBottom: "1px solid rgba(22,85,143,0.07)",
+      }}
+    >
       <Container>
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 lg:gap-4">
           {stats.map((stat, index) => {
             const Icon = stat.icon;
             return (
               <motion.div
                 key={stat.label}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 18 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
-                className="flex flex-col items-center text-center group"
+                viewport={{ once: true, margin: "-40px" }}
+                transition={{ duration: 0.65, delay: index * 0.09, ease: [0.16, 1, 0.3, 1] }}
+                whileHover={{ y: -3, transition: { duration: 0.2, ease: "easeOut" } }}
+                className="group flex flex-col items-center text-center rounded-2xl px-4 py-6 cursor-default"
+                style={{
+                  background: "white",
+                  border: "1px solid #E4EDF6",
+                  boxShadow: "0 2px 8px rgba(22,85,143,0.06), 0 1px 2px rgba(22,85,143,0.04)",
+                  transition: "box-shadow 0.25s ease, border-color 0.25s ease",
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.boxShadow =
+                    "0 12px 32px rgba(79,163,209,0.14), 0 4px 12px rgba(22,85,143,0.08)";
+                  e.currentTarget.style.borderColor = "rgba(79,163,209,0.28)";
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.boxShadow =
+                    "0 2px 8px rgba(22,85,143,0.06), 0 1px 2px rgba(22,85,143,0.04)";
+                  e.currentTarget.style.borderColor = "#E4EDF6";
+                }}
               >
-                <div className="mb-4 p-4 rounded-2xl bg-primary/5 group-hover:bg-primary/10 transition-colors duration-300">
-                  <Icon size={28} className="text-primary" />
-                </div>
+                {/* Icon */}
+                <motion.div
+                  whileHover={{ rotate: [0, -8, 8, 0], transition: { duration: 0.4 } }}
+                  className="mb-3 flex items-center justify-center rounded-xl"
+                  style={{
+                    width: "40px",
+                    height: "40px",
+                    background: "rgba(79,163,209,0.09)",
+                    boxShadow: "0 2px 8px rgba(79,163,209,0.12)",
+                    flexShrink: 0,
+                  }}
+                >
+                  <Icon size={18} strokeWidth={1.8} style={{ color: "#4FA3D1" }} />
+                </motion.div>
+
+                {/* Counter */}
                 <Counter value={stat.value} suffix={stat.suffix} />
-                <p className="mt-2 text-sm md:text-base font-medium text-text-primary/60 uppercase tracking-widest">
+
+                {/* Label */}
+                <p
+                  className="mt-1.5 font-medium uppercase tracking-widest leading-tight"
+                  style={{
+                    fontSize: "0.62rem",
+                    color: "rgba(22,85,143,0.45)",
+                    letterSpacing: "0.14em",
+                  }}
+                >
                   {stat.label}
                 </p>
               </motion.div>

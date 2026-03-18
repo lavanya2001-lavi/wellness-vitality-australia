@@ -28,7 +28,7 @@ const WHY_IV_THERAPY = [
 
 export default function WhyIvSection() {
   return (
-    <Section className="py-24 lg:py-32" style={{ background: "#16558F" }}>
+    <Section className="py-14 lg:py-20" style={{ background: "#16558F" }}>
       <Container>
 
         {/* ── Header ── */}

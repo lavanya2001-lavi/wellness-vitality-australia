@@ -21,7 +21,7 @@ export default function Home() {
       <main className="flex-grow">
         <HomeHero />
         <WhyChooseSection />
-        <StatsSection />
+        {/* <StatsSection /> */}
         <ServicesSection />
         <IvTherapySection />
         <WhyIvSection />

@@ -95,9 +95,9 @@ export default function Navbar() {
                     className="relative px-4 py-2 rounded-full text-[0.8rem] font-medium transition-colors duration-200"
                     style={{
                       color: isActive
-                        ? "#B49A63"
+                        ? "#00B7B1"
                         : isHovered ? "#16558F" : "#6B7A8D",
-                      fontWeight: isActive ? 600 : 500,
+                      fontWeight: isActive ? 700 : 500,
                     }}
                   >
                     {/* Hover pill */}
@@ -119,8 +119,8 @@ export default function Navbar() {
                         className="absolute inset-0 rounded-full -z-10"
                         style={{
                           background: scrolled
-                            ? "rgba(180,154,99,0.08)"
-                            : "rgba(180,154,99,0.12)",
+                            ? "rgba(0,183,177,0.06)"
+                            : "rgba(0,183,177,0.1)",
                         }}
                         transition={{ type: "spring", stiffness: 400, damping: 30 }}
                       />
@@ -128,11 +128,12 @@ export default function Navbar() {
 
                     <span className="relative z-10 flex items-center gap-1.5">
                       {link.label}
-                      {/* Active gold dot */}
+                      {/* Active teal dot */}
                       {isActive && (
                         <motion.span
                           layoutId="activeDot"
-                          className="w-1 h-1 rounded-full bg-[#B49A63] flex-shrink-0"
+                          className="w-1 h-1 rounded-full bg-[#00B7B1] flex-shrink-0"
+                          style={{ boxShadow: "0 0 8px rgba(0,183,177,0.6)" }}
                         />
                       )}
                     </span>
@@ -145,12 +146,12 @@ export default function Navbar() {
             <div className="hidden lg:flex items-center flex-shrink-0">
               <Link
                 href="/booking"
-                className="px-5 py-2.5 rounded-full text-white text-[0.8rem] font-medium
-                  transition-all duration-200 hover:-translate-y-0.5 hover:shadow-lg"
+                className="px-6 py-2.5 rounded-full text-white text-[0.8rem] font-bold
+                  transition-all duration-300 hover:-translate-y-0.5"
                 style={{
-                  background: "#B49A63",
-                  boxShadow: "0 4px 14px rgba(180,154,99,0.35)",
-                  letterSpacing: "0.03em",
+                  background: "linear-gradient(135deg, #16558F 0%, #4FA3D1 50%, #00B7B1 100%)",
+                  boxShadow: "0 8px 20px rgba(22,85,143,0.25)",
+                  letterSpacing: "0.04em",
                 }}
               >
                 Book Appointment
@@ -161,8 +162,8 @@ export default function Navbar() {
             <div className="flex lg:hidden items-center gap-3">
               <Link
                 href="/booking"
-                className="hidden sm:inline-flex px-4 py-2 rounded-full text-white text-[0.8rem] font-medium"
-                style={{ background: "#B49A63" }}
+                className="hidden sm:inline-flex px-4 py-2 rounded-full text-white text-[0.85rem] font-bold shadow-lg"
+                style={{ background: "linear-gradient(135deg, #16558F 0%, #00B7B1 100%)" }}
               >
                 Book
               </Link>
@@ -252,7 +253,7 @@ export default function Navbar() {
                         >
                           {link.label}
                           {isActive && (
-                            <span className="w-2 h-2 rounded-full bg-[#B49A63]" />
+                            <span className="w-2 h-2 rounded-full bg-[#00B7B1] shadow-[0_0_8px_rgba(0,183,177,0.5)]" />
                           )}
                         </Link>
                       </motion.div>
@@ -274,8 +275,8 @@ export default function Navbar() {
                       className="flex items-center justify-center w-full py-4 rounded-2xl
                         text-white font-medium text-[1rem] transition-all duration-200"
                       style={{
-                        background: "#B49A63",
-                        boxShadow: "0 6px 20px rgba(180,154,99,0.35)",
+                        background: "linear-gradient(135deg, #16558F 0%, #4FA3D1 50%, #00B7B1 100%)",
+                        boxShadow: "0 8px 30px rgba(0,183,177,0.3)",
                       }}
                     >
                       Book Appointment

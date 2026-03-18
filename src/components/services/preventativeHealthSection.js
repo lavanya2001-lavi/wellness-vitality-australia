@@ -50,10 +50,10 @@ export default function PreventativeHealthSection() {
                   whileInView={{ opacity: 1, x: 0 }}
                   transition={{ delay: i * 0.08, duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
                   viewport={{ once: true }}
-                  className="relative group flex items-center gap-5 p-5 rounded-[2rem] bg-white/60 backdrop-blur-xl border border-white/80 shadow-[0_8px_30px_rgb(0,0,0,0.03)] hover:shadow-[0_20px_40px_rgba(22,85,143,0.08)] hover:-translate-y-1 transition-all duration-500 overflow-hidden"
+                  className="relative group flex items-center gap-5 p-5 rounded-[2.5rem] bg-white/60 backdrop-blur-xl border border-white/80 shadow-[0_8px_30px_rgb(0,0,0,0.03)] hover:shadow-[0_20px_40px_rgba(79,163,209,0.12)] hover:-translate-y-1 transition-all duration-500 overflow-hidden"
                 >
-                  <div className="absolute inset-0 bg-gradient-to-r from-primary/[0.03] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                  <div className="relative z-10 w-12 h-12 rounded-2xl bg-primary/5 flex items-center justify-center shrink-0 text-primary group-hover:bg-primary group-hover:text-white group-hover:shadow-[0_0_20px_rgba(22,85,143,0.3)] transition-all duration-500">
+                  <div className="absolute inset-0 bg-gradient-to-r from-[#4FA3D1]/[0.05] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                  <div className="relative z-10 w-12 h-12 rounded-2xl bg-primary/5 flex items-center justify-center shrink-0 text-primary group-hover:bg-gradient-to-br group-hover:from-[#16558F] group-hover:to-[#4FA3D1] group-hover:text-white group-hover:shadow-[0_8px_20px_rgba(79,163,209,0.3)] transition-all duration-500">
                     <item.icon size={22} strokeWidth={1.5} />
                   </div>
                   <p className="relative z-10 font-bold text-gray-800 text-[15px]">{item.text}</p>
@@ -83,10 +83,10 @@ export default function PreventativeHealthSection() {
                   whileInView={{ opacity: 1, x: 0 }}
                   transition={{ delay: i * 0.08, duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
                   viewport={{ once: true }}
-                  className="relative group flex items-center gap-5 p-5 rounded-[2rem] bg-white/60 backdrop-blur-xl border border-white/80 shadow-[0_8px_30px_rgb(0,0,0,0.03)] hover:shadow-[0_20px_40px_rgba(180,154,99,0.08)] hover:-translate-y-1 transition-all duration-500 overflow-hidden"
+                  className="relative group flex items-center gap-5 p-5 rounded-[2.5rem] bg-white/60 backdrop-blur-xl border border-white/80 shadow-[0_8px_30px_rgb(0,0,0,0.03)] hover:shadow-[0_20px_40px_rgba(180,154,99,0.12)] hover:-translate-y-1 transition-all duration-500 overflow-hidden"
                 >
                   <div className="absolute inset-0 bg-gradient-to-r from-secondary/[0.04] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                  <div className="relative z-10 w-12 h-12 rounded-2xl bg-secondary/10 flex items-center justify-center shrink-0 text-secondary group-hover:bg-secondary group-hover:text-white group-hover:shadow-[0_0_20px_rgba(180,154,99,0.3)] transition-all duration-500">
+                  <div className="relative z-10 w-12 h-12 rounded-2xl bg-secondary/10 flex items-center justify-center shrink-0 text-secondary group-hover:bg-secondary group-hover:text-white group-hover:shadow-[0_8px_20px_rgba(180,154,99,0.3)] transition-all duration-500">
                     <item.icon size={22} strokeWidth={1.5} />
                   </div>
                   <p className="relative z-10 font-bold text-gray-800 text-[15px]">{item.text}</p>
