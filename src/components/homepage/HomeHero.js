@@ -106,16 +106,16 @@ export default function HomeHero() {
             transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1], delay: 0.15 }}
             className="inline-flex items-center gap-2.5 rounded-full px-5 py-2.5 mb-8"
             style={{
-              background: "linear-gradient(135deg, rgba(230, 184, 92, 0.15) 0%, rgba(31, 199, 193, 0.15) 100%)",
-              border: "1px solid rgba(31, 199, 193, 0.45)",
+              background: "linear-gradient(135deg, rgba(22, 85, 143, 0.15) 0%, rgba(0, 183, 177, 0.15) 100%)",
+              border: "1px solid rgba(0, 183, 177, 0.4)",
               backdropFilter: "blur(14px)",
-              boxShadow: "0 0 25px rgba(31, 199, 193, 0.15)",
+              boxShadow: "0 0 25px rgba(0, 183, 177, 0.1)",
             }}
           >
-            <div className="w-7 h-7 rounded-full flex items-center justify-center bg-gradient-to-br from-[#1E88E5] to-[#1FC7C1] shadow-[0_0_12px_rgba(31,199,193,0.4)]">
+            <div className="w-7 h-7 rounded-full flex items-center justify-center bg-gradient-to-br from-[#16558F] to-[#00B7B1] shadow-[0_0_12px_rgba(0,183,177,0.3)]">
               <Droplets size={13} color="white" />
             </div>
-            <span className="text-white font-bold text-[11px] tracking-[0.22em] uppercase" style={{ textShadow: "0 0 10px rgba(31,199,193,0.3)" }}>
+            <span className="text-white font-bold text-[11px] tracking-[0.22em] uppercase" style={{ textShadow: "0 0 10px rgba(0,183,177,0.2)" }}>
               IV Infusion &amp; Wellness
             </span>
           </motion.div>
@@ -129,15 +129,15 @@ export default function HomeHero() {
             style={{
               fontFamily: "'Cormorant Garamond', serif",
               fontSize: "clamp(2.6rem, 5vw, 4.2rem)",
-              textShadow: "0 4px 30px rgba(0,0,0,0.4)",
+              textShadow: "0 4px 30px rgba(0,0,0,0.5)",
               lineHeight: 1.1,
             }}
           >
-            <span style={{ color: "#F5F7FA" }}>Welcome to</span> <br className="sm:hidden" />
-            <span style={{ color: "#E6B85C", textShadow: "0 0 25px rgba(230,184,92,0.45)" }}>Wellness</span>
+            <span style={{ color: "white" }}>Welcome to</span> <br className="sm:hidden" />
+            <span style={{ color: "#F8FAFC", textShadow: "0 0 30px rgba(255,255,255,0.3)" }}>Wellness</span>
             <span style={{ color: "white" }}> & </span>
-            <span style={{ color: "#1FC7C1", textShadow: "0 0 25px rgba(31,199,193,0.45)" }}>Vitality</span> <br className="sm:hidden" />
-            <span style={{ color: "#F5F7FA" }}>Australia</span>
+            <span style={{ color: "#00B7B1", textShadow: "0 0 30px rgba(0,183,177,0.5)" }}>Vitality</span> <br className="sm:hidden" />
+            <span style={{ color: "white" }}>Australia</span>
           </motion.h1>
 
           {/* Subheading */}
@@ -145,65 +145,53 @@ export default function HomeHero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.85, ease: [0.16, 1, 0.3, 1], delay: 0.42 }}
-            className="font-medium leading-relaxed mb-6"
+            className="font-medium leading-relaxed mb-10"
             style={{
               fontSize: "1.15rem",
-              color: "rgba(255, 255, 255, 0.9)",
-              maxWidth: "42ch",
-              textShadow: "0 1px 10px rgba(0,0,0,0.2)",
+              color: "rgba(255, 255, 255, 0.85)",
+              maxWidth: "44ch",
+              textShadow: "0 1px 15px rgba(0,0,0,0.3)",
             }}
           >
-            Professional mobile healthcare and IV wellness services across Australia.
+            Professional mobile healthcare and IV wellness services delivered by AHPRA-registered nurses.
           </motion.p>
-
-          {/* IV Pricing Block */}
-          {/* <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 1, delay: 0.5 }}
-            className="mb-10 text-white/70 text-sm space-y-2 font-light tracking-wide"
-          >
-            <p>Immune Defence IV — $220+</p>
-            <p>Energy & Performance IV — $200+</p>
-            <p>Hydration & Recovery IV — $180+</p>
-          </motion.div> */}
 
           {/* Buttons */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.85, ease: [0.16, 1, 0.3, 1], delay: 0.6 }}
-            className="flex flex-col sm:flex-row gap-4"
+            className="flex flex-col sm:flex-row gap-5"
           >
             <Link
               href="/booking"
-              className="inline-flex items-center justify-center gap-2 px-9 py-4 rounded-full text-white font-semibold transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_14px_40px_rgba(0,183,177,0.35)]"
+              className="inline-flex items-center justify-center gap-2 px-10 py-4 rounded-full text-white font-bold transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_15px_45px_rgba(0,183,177,0.4)]"
               style={{
-                background: "linear-gradient(135deg, #1E88E5 0%, #1FC7C1 100%)",
-                fontSize: "0.9rem",
-                letterSpacing: "0.04em",
-                boxShadow: "0 8px 28px rgba(31,199,193,0.35)",
+                background: "linear-gradient(135deg, #16558F 0%, #00B7B1 100%)",
+                fontSize: "0.95rem",
+                letterSpacing: "0.05em",
+                boxShadow: "0 8px 30px rgba(0,183,177,0.3)",
               }}
             >
               <Droplets size={16} />
-              Book Your Treatment
+              Book Treatment
             </Link>
 
             <Link
               href="/services"
-              className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full font-medium transition-all duration-300 hover:-translate-y-0.5 hover:bg-white/12 active:scale-95"
+              className="inline-flex items-center justify-center gap-2 px-10 py-4 rounded-full font-bold transition-all duration-300 hover:-translate-y-1 hover:bg-white/10"
               style={{
-                background: "rgba(255,255,255,0.06)",
-                border: "1.5px solid rgba(31,199,193,0.4)",
-                backdropFilter: "blur(14px)",
+                background: "rgba(255,255,255,0.05)",
+                border: "1.5px solid rgba(0,183,177,0.5)",
+                backdropFilter: "blur(20px)",
                 color: "white",
-                fontSize: "0.9rem",
-                letterSpacing: "0.03em",
-                boxShadow: "0 0 15px rgba(31,199,193,0.1)",
+                fontSize: "0.95rem",
+                letterSpacing: "0.05em",
+                boxShadow: "0 0 20px rgba(0,183,177,0.15)",
               }}
             >
-              View Services
-              <Sparkles size={15} className="text-[#1FC7C1]" />
+              Our Services
+              <Sparkles size={16} className="text-[#00B7B1]" />
             </Link>
           </motion.div>
 
@@ -212,17 +200,19 @@ export default function HomeHero() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1, delay: 0.8 }}
-            className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 mt-12"
+            className="flex flex-wrap items-center justify-center gap-x-8 gap-y-3 mt-16"
           >
-            {["Registered Nurses", "TGA Approved", "Mobile Service"].map((tag, i) => (
-              <span
+            {["Registered Nurses", "TGA Approved", "Mobile Healthcare"].map((tag, i) => (
+              <div
                 key={i}
-                className="flex items-center gap-1.5 text-[11px] font-medium uppercase tracking-[0.12em]"
-                style={{ color: "rgba(255,255,255,0.45)" }}
+                className="flex items-center gap-2 text-[10px] font-bold uppercase tracking-[0.15em]"
+                style={{ color: "rgba(255,255,255,0.5)" }}
               >
-                <Check size={12} className="text-[#1FC7C1]" strokeWidth={3} />
+                <div className="w-5 h-5 rounded-full bg-[#00B7B1]/10 flex items-center justify-center">
+                  <Check size={10} className="text-[#00B7B1]" strokeWidth={4} />
+                </div>
                 {tag}
-              </span>
+              </div>
             ))}
           </motion.div>
         </div>
