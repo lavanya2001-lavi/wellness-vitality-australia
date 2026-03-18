@@ -11,15 +11,15 @@ export function SectionHeader({ title, subtitle, centered = true, className = ""
         viewport={{ once: true }}
         transition={{ duration: 0.6 }}
       >
-        <h2 className={`text-3xl md:text-4xl font-bold mb-4 font-serif ${dark ? "text-white" : "text-primary"}`}>
+        <h2 className={`text-3xl md:text-4xl font-bold mb-4 font-serif ${dark ? "text-white" : "text-[#0F172A]"}`}>
           {title}
         </h2>
         {subtitle && (
-          <p className={`text-lg max-w-2xl mx-auto leading-relaxed ${dark ? "text-white/80" : "text-text-primary/70"}`}>
+          <p className={`text-lg max-w-2xl mx-auto leading-relaxed ${dark ? "text-white/80" : "text-[#4B5563]"}`}>
             {subtitle}
           </p>
         )}
-        <div className={`mt-6 h-1 w-20 rounded-full ${centered ? "mx-auto" : ""} ${dark ? "bg-secondary" : "bg-secondary/30"}`} />
+        <div className={`mt-6 h-1 w-20 rounded-full ${centered ? "mx-auto" : ""} ${dark ? "bg-[#4FA3D1]" : "bg-[#4FA3D1]/30"}`} />
       </motion.div>
     </div>
   );

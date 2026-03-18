@@ -11,8 +11,7 @@ import ServicesSection from '../components/homepage/servicesSection';
 import IvTherapySection from '../components/homepage/ivTherapySection';
 import WhyIvSection from '../components/homepage/whyIvSection';
 import MobileCareSection from '../components/homepage/mobileCareSection';
-import BookingSection from '../components/homepage/bookingSection';
-import ContactCtaSection from '../components/homepage/contactCtaSection';
+import ContactBookingUnified from '../components/homepage/contactBookingUnified';
 
 export default function Home() {
   return (
@@ -26,8 +25,7 @@ export default function Home() {
         <IvTherapySection />
         <WhyIvSection />
         <MobileCareSection />
-        <BookingSection />
-        <ContactCtaSection />
+        <ContactBookingUnified />
         <ClinicalDisclaimer />
       </main>
       <Footer />
