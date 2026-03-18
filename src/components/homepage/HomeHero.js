@@ -75,7 +75,7 @@ export default function HomeHero() {
         className="absolute inset-0 z-[2] pointer-events-none"
         style={{
           background:
-            "linear-gradient(135deg, rgba(6,24,50,0.72) 0%, rgba(10,48,85,0.55) 35%, rgba(14,80,130,0.35) 65%, rgba(79,163,209,0.2) 100%)",
+            "linear-gradient(135deg, rgba(10, 25, 40, 0.75) 0%, rgba(10, 25, 40, 0.55) 50%, rgba(10, 25, 40, 0.35) 100%)",
         }}
       />
       {/* Secondary vertical overlay for bottom contrast */}
@@ -106,16 +106,16 @@ export default function HomeHero() {
             transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1], delay: 0.15 }}
             className="inline-flex items-center gap-2.5 rounded-full px-5 py-2.5 mb-8"
             style={{
-              background: "linear-gradient(135deg, rgba(79, 163, 209, 0.15) 0%, rgba(0, 183, 177, 0.15) 100%)",
-              border: "1px solid rgba(0, 183, 177, 0.45)",
+              background: "linear-gradient(135deg, rgba(230, 184, 92, 0.15) 0%, rgba(31, 199, 193, 0.15) 100%)",
+              border: "1px solid rgba(31, 199, 193, 0.45)",
               backdropFilter: "blur(14px)",
-              boxShadow: "0 0 25px rgba(0, 183, 177, 0.25)",
+              boxShadow: "0 0 25px rgba(31, 199, 193, 0.15)",
             }}
           >
-            <div className="w-7 h-7 rounded-full flex items-center justify-center bg-gradient-to-br from-[#4FA3D1] to-[#00B7B1] shadow-[0_0_12px_rgba(0,183,177,0.6)]">
+            <div className="w-7 h-7 rounded-full flex items-center justify-center bg-gradient-to-br from-[#1E88E5] to-[#1FC7C1] shadow-[0_0_12px_rgba(31,199,193,0.4)]">
               <Droplets size={13} color="white" />
             </div>
-            <span className="text-white font-bold text-[11px] tracking-[0.22em] uppercase" style={{ textShadow: "0 0 10px rgba(0,183,177,0.4)" }}>
+            <span className="text-white font-bold text-[11px] tracking-[0.22em] uppercase" style={{ textShadow: "0 0 10px rgba(31,199,193,0.3)" }}>
               IV Infusion &amp; Wellness
             </span>
           </motion.div>
@@ -133,11 +133,11 @@ export default function HomeHero() {
               lineHeight: 1.1,
             }}
           >
-            <span style={{ color: "rgba(224, 242, 254, 0.95)" }}>Welcome to</span> <br className="sm:hidden" />
-            <span style={{ color: "#4FA3D1", textShadow: "0 0 25px rgba(79,163,209,0.45)" }}>Wellness</span>
+            <span style={{ color: "#F5F7FA" }}>Welcome to</span> <br className="sm:hidden" />
+            <span style={{ color: "#E6B85C", textShadow: "0 0 25px rgba(230,184,92,0.45)" }}>Wellness</span>
             <span style={{ color: "white" }}> & </span>
-            <span style={{ color: "#00B7B1", textShadow: "0 0 25px rgba(0,183,177,0.45)" }}>Vitality</span> <br className="sm:hidden" />
-            <span style={{ color: "rgba(224, 242, 254, 0.95)" }}>Australia</span>
+            <span style={{ color: "#1FC7C1", textShadow: "0 0 25px rgba(31,199,193,0.45)" }}>Vitality</span> <br className="sm:hidden" />
+            <span style={{ color: "#F5F7FA" }}>Australia</span>
           </motion.h1>
 
           {/* Subheading */}
@@ -179,10 +179,10 @@ export default function HomeHero() {
               href="/booking"
               className="inline-flex items-center justify-center gap-2 px-9 py-4 rounded-full text-white font-semibold transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_14px_40px_rgba(0,183,177,0.35)]"
               style={{
-                background: "linear-gradient(135deg, #16558F 0%, #4FA3D1 50%, #00B7B1 100%)",
+                background: "linear-gradient(135deg, #1E88E5 0%, #1FC7C1 100%)",
                 fontSize: "0.9rem",
                 letterSpacing: "0.04em",
-                boxShadow: "0 8px 28px rgba(22,85,143,0.35)",
+                boxShadow: "0 8px 28px rgba(31,199,193,0.35)",
               }}
             >
               <Droplets size={16} />
@@ -194,16 +194,16 @@ export default function HomeHero() {
               className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full font-medium transition-all duration-300 hover:-translate-y-0.5 hover:bg-white/12 active:scale-95"
               style={{
                 background: "rgba(255,255,255,0.06)",
-                border: "1.5px solid rgba(79,163,209,0.4)",
+                border: "1.5px solid rgba(31,199,193,0.4)",
                 backdropFilter: "blur(14px)",
                 color: "white",
                 fontSize: "0.9rem",
                 letterSpacing: "0.03em",
-                boxShadow: "0 0 15px rgba(79,163,209,0.1)",
+                boxShadow: "0 0 15px rgba(31,199,193,0.1)",
               }}
             >
               View Services
-              <Sparkles size={15} className="text-[#4FA3D1]" />
+              <Sparkles size={15} className="text-[#1FC7C1]" />
             </Link>
           </motion.div>
 
@@ -220,7 +220,7 @@ export default function HomeHero() {
                 className="flex items-center gap-1.5 text-[11px] font-medium uppercase tracking-[0.12em]"
                 style={{ color: "rgba(255,255,255,0.45)" }}
               >
-                <Check size={12} className="text-[#4FA3D1]" strokeWidth={3} />
+                <Check size={12} className="text-[#1FC7C1]" strokeWidth={3} />
                 {tag}
               </span>
             ))}

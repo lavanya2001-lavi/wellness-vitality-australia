@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Zap, TrendingUp, Layers } from "lucide-react";
+import { Zap, TrendingUp, Layers, CheckCircle2 } from "lucide-react";
 import Section from "../shared/sectionWrapper";
 import Container from "../shared/Container";
 
@@ -9,7 +9,7 @@ const WHY_IV_THERAPY = [
   {
     num: "01",
     title: "Direct Nutrient Delivery",
-    desc: "IV therapy delivers nutrients directly into the bloodstream, bypassing the digestive system entirely for immediate bioavailability.",
+    desc: "IV therapy delivers nutrients directly into the bloodstream, bypassing the digestive system for immediate bioavailability.",
     icon: Zap,
   },
   {
@@ -28,169 +28,113 @@ const WHY_IV_THERAPY = [
 
 export default function WhyIvSection() {
   return (
-    <Section className="py-14 lg:py-20" style={{ background: "#16558F" }}>
+    <Section dark={true}>
       <Container>
-
-        {/* ── Header ── */}
-        <motion.div
-          initial={{ opacity: 0, y: 24 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1] }}
-          className="text-center mb-16"
-        >
-          {/* Eyebrow */}
-          <div className="inline-flex items-center gap-2.5 mb-5">
-            <span className="w-6 h-[1.5px] bg-[#B49A63]" />
-            <span
-              className="text-[9.5px] font-semibold tracking-[0.26em] uppercase text-[#B49A63]"
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+          
+          {/* ── Left Image Panel ── */}
+          <motion.div
+            initial={{ opacity: 0, x: -30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+            className="relative"
+          >
+            <div className="aspect-square rounded-[2.5rem] overflow-hidden shadow-2xl relative group">
+              <img 
+                src="/assets/iv_water_drop_hero.png" 
+                alt="IV Therapy Science"
+                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-[#4FA3D1]/20 mix-blend-multiply" />
+              <div className="absolute inset-0 bg-gradient-to-tr from-[#0F172A]/80 via-transparent to-transparent" />
+            </div>
+            
+            {/* Floating Stats Card */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.4, duration: 0.6 }}
+              className="absolute -bottom-8 -right-8 p-6 bg-white rounded-3xl shadow-2xl border border-[#4FA3D1]/10 hidden sm:block"
             >
-              Why IV Therapy
-            </span>
-            <span className="w-6 h-[1.5px] bg-[#B49A63]" />
-          </div>
-
-          <h2
-            className="font-serif font-bold text-white leading-[1.06] tracking-tight mb-4"
-            style={{ fontSize: "clamp(2rem, 3.5vw, 2.8rem)" }}
-          >
-            The Science Behind{" "}
-            <em className="italic text-[#B49A63]">IV Therapy</em>
-          </h2>
-
-          <p className="text-[0.85rem] font-light text-white/45 leading-relaxed max-w-[46ch] mx-auto">
-            Understanding the clinical benefits of intravenous nutrient delivery
-            — and why it outperforms conventional supplementation.
-          </p>
-        </motion.div>
-
-        {/* ── Cards ── */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-          {WHY_IV_THERAPY.map((item, i) => {
-            const Icon = item.icon;
-            return (
-              <motion.div
-                key={i}
-                initial={{ opacity: 0, y: 24 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{
-                  delay: 0.1 + i * 0.1,
-                  duration: 0.8,
-                  ease: [0.16, 1, 0.3, 1],
-                }}
-                className="group relative rounded-[20px] p-8 overflow-hidden cursor-default transition-all duration-300 hover:border-[rgba(180,154,99,0.25)]"
-                style={{
-                  background: "rgba(255,255,255,0.04)",
-                  border: "1px solid rgba(255,255,255,0.08)",
-                }}
-              >
-                {/* Gold radial glow on hover */}
-                <div
-                  className="absolute -bottom-16 left-1/2 -translate-x-1/2 w-40 h-40 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"
-                  style={{
-                    background:
-                      "radial-gradient(circle, rgba(180,154,99,0.18) 0%, transparent 70%)",
-                  }}
-                />
-
-                {/* Subtle top shimmer on hover */}
-                <div
-                  className="absolute top-0 left-0 right-0 h-[1px] opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"
-                  style={{
-                    background:
-                      "linear-gradient(to right, transparent, rgba(180,154,99,0.6), transparent)",
-                  }}
-                />
-
-                {/* Card content */}
-                <div className="relative z-10">
-
-                  {/* Benefit number */}
-                  <p
-                    className="text-[9px] font-semibold tracking-[0.2em] uppercase mb-5"
-                    style={{ color: "rgba(180,154,99,0.5)" }}
-                  >
-                    {item.num} — Benefit
-                  </p>
-
-                  {/* Icon */}
-                  <div
-                    className="w-14 h-14 rounded-2xl flex items-center justify-center mb-6 transition-all duration-300 group-hover:bg-[rgba(180,154,99,0.18)] group-hover:border-[rgba(180,154,99,0.3)]"
-                    style={{
-                      background: "rgba(180,154,99,0.1)",
-                      border: "1px solid rgba(180,154,99,0.2)",
-                    }}
-                  >
-                    <Icon
-                      size={22}
-                      strokeWidth={1.6}
-                      className="text-[#B49A63] transition-colors duration-300"
-                    />
-                  </div>
-
-                  {/* Title */}
-                  <h3
-                    className="font-serif font-bold text-white leading-snug mb-3 transition-colors duration-300"
-                    style={{ fontSize: "1.08rem" }}
-                  >
-                    {item.title}
-                  </h3>
-
-                  {/* Description */}
-                  <p
-                    className="text-[0.78rem] font-light leading-relaxed transition-colors duration-300"
-                    style={{ color: "rgba(255,255,255,0.45)" }}
-                  >
-                    {item.desc}
-                  </p>
-
-                  {/* Animated gold divider */}
-                  <div
-                    className="mt-6 h-[1.5px] bg-[#B49A63] opacity-40 w-7 group-hover:w-11 group-hover:opacity-100 transition-all duration-300"
-                  />
+              <div className="flex items-center gap-4">
+                <div className="w-12 h-12 rounded-2xl bg-[#00B7B1]/10 flex items-center justify-center text-[#00B7B1]">
+                  <CheckCircle2 size={24} />
                 </div>
-              </motion.div>
-            );
-          })}
-        </div>
+                <div>
+                  <p className="text-2xl font-bold text-[#0F172A] leading-none">100%</p>
+                  <p className="text-[11px] font-bold text-[#4B5563] uppercase tracking-wider mt-1">Direct Absorption</p>
+                </div>
+              </div>
+            </motion.div>
+          </motion.div>
 
-        {/* ── Bottom CTA ── */}
-        <motion.div
-          initial={{ opacity: 0, y: 16 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1], delay: 0.5 }}
-          className="mt-14 flex flex-col sm:flex-row items-center justify-between gap-6 rounded-2xl px-8 py-6"
-          style={{
-            background: "rgba(255,255,255,0.04)",
-            border: "1px solid rgba(255,255,255,0.07)",
-          }}
-        >
-          <div className="flex items-center gap-4">
-            <span
-              className="w-2.5 h-2.5 rounded-full flex-shrink-0 animate-pulse"
-              style={{ background: "#B49A63" }}
-            />
-            <p className="text-white/70 font-light text-[0.95rem]">
-              Ready to experience the benefits of{" "}
-              <span className="text-[#B49A63] font-medium">IV therapy at home?</span>
-            </p>
+          {/* ── Right Content Panel ── */}
+          <div>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8 }}
+              className="mb-12"
+            >
+              <div className="flex items-center gap-3 mb-4">
+                <div className="h-px w-8 bg-[#4FA3D1]" />
+                <span className="text-[10px] font-bold tracking-[0.25em] uppercase text-[#4FA3D1]">
+                  Why IV Therapy
+                </span>
+              </div>
+              <h2 className="font-serif font-bold text-white leading-tight mb-6" style={{ fontSize: "clamp(2rem, 3.5vw, 2.8rem)" }}>
+                The Science Behind <span className="italic text-white">Nutrient Delivery</span>
+              </h2>
+              <p className="text-[1rem] text-white/90 leading-relaxed max-w-[50ch]">
+                Intravenous nutrient delivery provides immediate benefits that conventional supplements cannot match, ensuring your body gets what it needs, when it needs it.
+              </p>
+            </motion.div>
+
+            <div className="space-y-8">
+              {WHY_IV_THERAPY.map((item, i) => {
+                const Icon = item.icon;
+                return (
+                  <motion.div
+                    key={i}
+                    initial={{ opacity: 0, x: 20 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: 0.1 * i, duration: 0.6 }}
+                    className="flex gap-5"
+                  >
+                    <div className="w-12 h-12 rounded-2xl bg-white/10 border border-white/20 flex items-center justify-center shrink-0 text-[#00B7B1]">
+                      <Icon size={22} />
+                    </div>
+                    <div>
+                      <h4 className="text-white font-bold text-lg mb-2">{item.title}</h4>
+                      <p className="text-white/80 text-[0.9rem] leading-relaxed">{item.desc}</p>
+                    </div>
+                  </motion.div>
+                );
+              })}
+            </div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.5, duration: 0.6 }}
+              className="mt-12"
+            >
+              <a
+                href="/booking"
+                className="inline-flex items-center gap-2.5 px-8 py-4 rounded-full text-white font-bold text-[0.9rem] transition-all hover:shadow-[0_15px_35px_rgba(0,183,177,0.3)] hover:-translate-y-1"
+                style={{ background: "linear-gradient(135deg, #4FA3D1 0%, #00B7B1 100%)" }}
+              >
+                Book a Session
+                <CheckCircle2 size={16} />
+              </a>
+            </motion.div>
           </div>
-          <a
-            href="/booking"
-            className="flex-shrink-0 inline-flex items-center gap-2.5 px-7 py-3.5 rounded-full text-white font-medium text-[0.88rem] tracking-[0.03em] transition-all duration-200 hover:-translate-y-0.5 hover:shadow-xl"
-            style={{
-              background: "#B49A63",
-              boxShadow: "0 6px 20px rgba(180,154,99,0.3)",
-            }}
-          >
-            Book a Session
-            <svg width="10" height="10" viewBox="0 0 10 10" fill="none">
-              <path d="M2 8L8 2M8 2H3M8 2V7" stroke="white" strokeWidth="1.5" strokeLinecap="round" />
-            </svg>
-          </a>
-        </motion.div>
+        </div>
       </Container>
     </Section>
   );
