@@ -18,13 +18,8 @@ export default function BookingPage() {
           layout="centered"
           badgeIcon={Calendar}
           badgeText="Secure Bookings"
-          videoSrc="/videos/bookingbg.mp4"
-          title={
-            <>
-              Book Your <br />
-              <em style={{ color: "#B49A63", fontStyle: "italic", fontWeight: 600 }}>Appointment</em>
-            </>
-          }
+          videoSrc="/videos/bgvideo.mp4"
+          title="Book Your Appointment"
           description="Simple, secure, and clinical. Select your treatment and preferred time below to start your journey to vitality."
         />
         <BookingWidgetSection />

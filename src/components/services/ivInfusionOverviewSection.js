@@ -31,19 +31,21 @@ export default function IvInfusionOverviewSection() {
           </motion.div>
 
           <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
+            initial={{ opacity: 0, scale: 0.95 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="mt-8 p-10 rounded-[3rem] bg-white/5 backdrop-blur-md border border-white/10"
+            className="mt-10 p-12 rounded-[3.5rem] bg-gradient-to-br from-white/[0.08] to-white/[0.02] backdrop-blur-xl border border-white/[0.12] shadow-2xl relative overflow-hidden"
           >
-            <div className="w-20 h-20 mx-auto rounded-3xl bg-white/10 flex items-center justify-center mb-8">
-              <Droplets size={40} className="text-secondary" />
+            <div className="absolute top-0 right-0 w-64 h-64 bg-[#4FA3D1]/15 rounded-full blur-[100px] pointer-events-none" />
+            
+            <div className="relative z-10 w-24 h-24 mx-auto rounded-3xl bg-gradient-to-br from-[#16558F] to-[#4FA3D1] flex items-center justify-center mb-10 shadow-[0_15px_40px_rgba(79,163,209,0.4)]">
+              <Droplets size={44} className="text-white" />
             </div>
-            <p className="text-white/80 leading-relaxed max-w-xl mx-auto mb-10">
+            <p className="text-white/95 text-xl leading-relaxed max-w-xl mx-auto mb-12" style={{ textShadow: "0 2px 10px rgba(0,0,0,0.3)" }}>
               Our IV infusion treatments are administered by AHPRA-registered nurses and tailored to each patient&apos;s needs. Choose from our range of therapy options including immune support, energy boosters, beauty drips and more.
             </p>
-            <Button href="/iv-infusions" variant="cta" className="px-12 py-4 text-lg shadow-[0_0_30px_rgba(180,154,99,0.3)] border border-[#B49A63]/50">
+            <Button href="/iv-infusions" variant="primary" className="px-14 py-5 text-xl tracking-wide shadow-[0_15px_45px_rgba(22,85,143,0.5)] border border-white/10">
               Explore IV Infusions
             </Button>
           </motion.div>
