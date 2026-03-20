@@ -12,14 +12,12 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
           {/* Brand Col */}
           <div className="lg:col-span-1">
-            <Link href="/" className="flex items-center gap-3 mb-8 group">
-              <div className="p-2 bg-white rounded-xl shadow-lg ring-1 ring-primary/5">
-                <img 
-                  src="/logo.png" 
-                  alt="Wellness & Vitality" 
-                  className="h-14 md:h-16 w-auto"
-                />
-              </div>
+            <Link href="/" className="mb-8 group block">
+              <img
+                src="/logofooter.png"
+                alt="Wellness & Vitality"
+                className="h-14 md:h-22 w-auto"
+              />
             </Link>
             <p className="text-white/70 leading-relaxed mb-8">
               Empowering your journey to holistic health through restorative flow and natural vitality. Professional wellness care tailored to your unique path.
@@ -70,9 +68,9 @@ export default function Footer() {
             <h4 className="text-lg font-bold mb-6 font-serif text-secondary uppercase tracking-widest text-sm">Newsletter</h4>
             <p className="text-white/70 text-sm mb-4">Join our community for wellness tips and updates.</p>
             <div className="flex flex-col gap-3">
-              <input 
-                type="email" 
-                placeholder="Your email address" 
+              <input
+                type="email"
+                placeholder="Your email address"
                 className="bg-white/10 border border-white/20 rounded-xl px-4 py-3 focus:outline-none focus:border-secondary transition-colors"
               />
               <Button variant="secondary" className="w-full">Subscribe</Button>
